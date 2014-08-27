@@ -9,7 +9,7 @@ Using Fleep Reader
 ------------------
 There are two ways of subscribing to a feed using Fleep Reader:
 
-1. Create a new conversation with Reader and say "subscribe <feed url>". If the feed is valid, Reader will respond by creating a new conversation with the name of the feed, and post 10 of the most recent items in the feed. When a new item appears in the feed, it is automatically posted to the conversation.
+1. Create a new conversation with Reader and say "subscribe &lt;feed url&gt;". If the feed is valid, Reader will respond by creating a new conversation with the name of the feed, and post 10 of the most recent items in the feed. When a new item appears in the feed, it is automatically posted to the conversation.
 
 2. To add several feeds at a time, you can post an OPML file (exported from another RSS reader) to a conversation with Reader. You will be subscribed to all valid feeds in the file.
 
