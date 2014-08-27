@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030BE68F19ACBAE500DD66CB /* FLApi+Actions.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63719ACBAE500DD66CB /* FLApi+Actions.m */; };
-		030BE69019ACBAE500DD66CB /* FLApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63919ACBAE500DD66CB /* FLApi.m */; };
-		030BE69119ACBAE500DD66CB /* FLApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63C19ACBAE500DD66CB /* FLApiRequest.m */; };
-		030BE69219ACBAE500DD66CB /* FLApiStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63E19ACBAE500DD66CB /* FLApiStats.m */; };
-		030BE69319ACBAE500DD66CB /* FLClassificators.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64019ACBAE500DD66CB /* FLClassificators.m */; };
-		030BE69419ACBAE500DD66CB /* FLEmoticonMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64219ACBAE500DD66CB /* FLEmoticonMap.m */; };
-		030BE69519ACBAE500DD66CB /* FLFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64419ACBAE500DD66CB /* FLFileDownloader.m */; };
-		030BE69619ACBAE500DD66CB /* FLFileUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64619ACBAE500DD66CB /* FLFileUploader.m */; };
-		030BE69719ACBAE500DD66CB /* FLMarkupEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64819ACBAE500DD66CB /* FLMarkupEncoder.m */; };
-		030BE69819ACBAE500DD66CB /* FLMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64A19ACBAE500DD66CB /* FLMessageParser.m */; };
-		030BE69919ACBAE500DD66CB /* FLMessageStripper.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64C19ACBAE500DD66CB /* FLMessageStripper.m */; };
-		030BE69A19ACBAE500DD66CB /* FLNetworkOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64E19ACBAE500DD66CB /* FLNetworkOperations.m */; };
-		030BE69B19ACBAE500DD66CB /* FLUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE65019ACBAE500DD66CB /* FLUserCredentials.m */; };
-		030BE69C19ACBAE500DD66CB /* FLUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE65219ACBAE500DD66CB /* FLUserProfile.m */; };
-		030BE6B019ACBAE500DD66CB /* FLObfuscator.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE67F19ACBAE500DD66CB /* FLObfuscator.m */; };
-		030BE6B119ACBAE500DD66CB /* FLTeeURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68119ACBAE500DD66CB /* FLTeeURLConnection.m */; };
-		030BE6B219ACBAE500DD66CB /* FLCommandLineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68419ACBAE500DD66CB /* FLCommandLineClient.m */; };
-		030BE6B319ACBAE500DD66CB /* FLJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68619ACBAE500DD66CB /* FLJsonParser.m */; };
-		030BE6B419ACBAE500DD66CB /* FLLogSanitization.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68819ACBAE500DD66CB /* FLLogSanitization.m */; };
-		030BE6B519ACBAE500DD66CB /* FLSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68A19ACBAE500DD66CB /* FLSortedArray.m */; };
-		030BE6B619ACBAE500DD66CB /* FLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68C19ACBAE500DD66CB /* FLUtils.m */; };
-		030BE6B719ACBAE500DD66CB /* FLXMLComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68E19ACBAE500DD66CB /* FLXMLComposer.m */; };
+		030BE73219ADDB6C00DD66CB /* FLApi+Actions.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE70319ADDB6C00DD66CB /* FLApi+Actions.m */; };
+		030BE73319ADDB6C00DD66CB /* FLApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE70519ADDB6C00DD66CB /* FLApi.m */; };
+		030BE73419ADDB6C00DD66CB /* FLApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE70819ADDB6C00DD66CB /* FLApiRequest.m */; };
+		030BE73519ADDB6C00DD66CB /* FLApiStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE70A19ADDB6C00DD66CB /* FLApiStats.m */; };
+		030BE73619ADDB6C00DD66CB /* FLClassificators.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE70C19ADDB6C00DD66CB /* FLClassificators.m */; };
+		030BE73719ADDB6C00DD66CB /* FLEmoticonMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE70E19ADDB6C00DD66CB /* FLEmoticonMap.m */; };
+		030BE73819ADDB6C00DD66CB /* FLFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71019ADDB6C00DD66CB /* FLFileDownloader.m */; };
+		030BE73919ADDB6C00DD66CB /* FLFileUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71219ADDB6C00DD66CB /* FLFileUploader.m */; };
+		030BE73A19ADDB6C00DD66CB /* FLMarkupEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71419ADDB6C00DD66CB /* FLMarkupEncoder.m */; };
+		030BE73B19ADDB6C00DD66CB /* FLMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71619ADDB6C00DD66CB /* FLMessageParser.m */; };
+		030BE73C19ADDB6C00DD66CB /* FLMessageStripper.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71819ADDB6C00DD66CB /* FLMessageStripper.m */; };
+		030BE73D19ADDB6C00DD66CB /* FLNetworkOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71A19ADDB6C00DD66CB /* FLNetworkOperations.m */; };
+		030BE73E19ADDB6C00DD66CB /* FLUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71C19ADDB6C00DD66CB /* FLUserCredentials.m */; };
+		030BE73F19ADDB6C00DD66CB /* FLUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE71E19ADDB6C00DD66CB /* FLUserProfile.m */; };
+		030BE74019ADDB6C00DD66CB /* FLObfuscator.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE72219ADDB6C00DD66CB /* FLObfuscator.m */; };
+		030BE74119ADDB6C00DD66CB /* FLTeeURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE72419ADDB6C00DD66CB /* FLTeeURLConnection.m */; };
+		030BE74219ADDB6C00DD66CB /* FLCommandLineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE72719ADDB6C00DD66CB /* FLCommandLineClient.m */; };
+		030BE74319ADDB6C00DD66CB /* FLJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE72919ADDB6C00DD66CB /* FLJsonParser.m */; };
+		030BE74419ADDB6C00DD66CB /* FLLogSanitization.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE72B19ADDB6C00DD66CB /* FLLogSanitization.m */; };
+		030BE74519ADDB6C00DD66CB /* FLSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE72D19ADDB6C00DD66CB /* FLSortedArray.m */; };
+		030BE74619ADDB6C00DD66CB /* FLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE72F19ADDB6C00DD66CB /* FLUtils.m */; };
+		030BE74719ADDB6C00DD66CB /* FLXMLComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE73119ADDB6C00DD66CB /* FLXMLComposer.m */; };
 		03292C5617B24FD800ADA326 /* RSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 03292C5517B24FD700ADA326 /* RSSParser.m */; };
 		03292C5917B252B500ADA326 /* ContentParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 03292C5817B252B400ADA326 /* ContentParser.m */; };
 		03292C5C17B2572F00ADA326 /* FeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 03292C5B17B2572F00ADA326 /* FeedRequest.m */; };
@@ -60,52 +60,52 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		030BE63619ACBAE500DD66CB /* FLApi+Actions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLApi+Actions.h"; sourceTree = "<group>"; };
-		030BE63719ACBAE500DD66CB /* FLApi+Actions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLApi+Actions.m"; sourceTree = "<group>"; };
-		030BE63819ACBAE500DD66CB /* FLApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApi.h; sourceTree = "<group>"; };
-		030BE63919ACBAE500DD66CB /* FLApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApi.m; sourceTree = "<group>"; };
-		030BE63A19ACBAE500DD66CB /* FLApiInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiInternal.h; sourceTree = "<group>"; };
-		030BE63B19ACBAE500DD66CB /* FLApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiRequest.h; sourceTree = "<group>"; };
-		030BE63C19ACBAE500DD66CB /* FLApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApiRequest.m; sourceTree = "<group>"; };
-		030BE63D19ACBAE500DD66CB /* FLApiStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiStats.h; sourceTree = "<group>"; };
-		030BE63E19ACBAE500DD66CB /* FLApiStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApiStats.m; sourceTree = "<group>"; };
-		030BE63F19ACBAE500DD66CB /* FLClassificators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLClassificators.h; sourceTree = "<group>"; };
-		030BE64019ACBAE500DD66CB /* FLClassificators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLClassificators.m; sourceTree = "<group>"; };
-		030BE64119ACBAE500DD66CB /* FLEmoticonMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEmoticonMap.h; sourceTree = "<group>"; };
-		030BE64219ACBAE500DD66CB /* FLEmoticonMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEmoticonMap.m; sourceTree = "<group>"; };
-		030BE64319ACBAE500DD66CB /* FLFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFileDownloader.h; sourceTree = "<group>"; };
-		030BE64419ACBAE500DD66CB /* FLFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFileDownloader.m; sourceTree = "<group>"; };
-		030BE64519ACBAE500DD66CB /* FLFileUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFileUploader.h; sourceTree = "<group>"; };
-		030BE64619ACBAE500DD66CB /* FLFileUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFileUploader.m; sourceTree = "<group>"; };
-		030BE64719ACBAE500DD66CB /* FLMarkupEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMarkupEncoder.h; sourceTree = "<group>"; };
-		030BE64819ACBAE500DD66CB /* FLMarkupEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMarkupEncoder.m; sourceTree = "<group>"; };
-		030BE64919ACBAE500DD66CB /* FLMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessageParser.h; sourceTree = "<group>"; };
-		030BE64A19ACBAE500DD66CB /* FLMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessageParser.m; sourceTree = "<group>"; };
-		030BE64B19ACBAE500DD66CB /* FLMessageStripper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessageStripper.h; sourceTree = "<group>"; };
-		030BE64C19ACBAE500DD66CB /* FLMessageStripper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessageStripper.m; sourceTree = "<group>"; };
-		030BE64D19ACBAE500DD66CB /* FLNetworkOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkOperations.h; sourceTree = "<group>"; };
-		030BE64E19ACBAE500DD66CB /* FLNetworkOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkOperations.m; sourceTree = "<group>"; };
-		030BE64F19ACBAE500DD66CB /* FLUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUserCredentials.h; sourceTree = "<group>"; };
-		030BE65019ACBAE500DD66CB /* FLUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUserCredentials.m; sourceTree = "<group>"; };
-		030BE65119ACBAE500DD66CB /* FLUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUserProfile.h; sourceTree = "<group>"; };
-		030BE65219ACBAE500DD66CB /* FLUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUserProfile.m; sourceTree = "<group>"; };
-		030BE65319ACBAE500DD66CB /* syntax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = syntax.json; sourceTree = "<group>"; };
-		030BE67E19ACBAE500DD66CB /* FLObfuscator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLObfuscator.h; sourceTree = "<group>"; };
-		030BE67F19ACBAE500DD66CB /* FLObfuscator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLObfuscator.m; sourceTree = "<group>"; };
-		030BE68019ACBAE500DD66CB /* FLTeeURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLTeeURLConnection.h; sourceTree = "<group>"; };
-		030BE68119ACBAE500DD66CB /* FLTeeURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLTeeURLConnection.m; sourceTree = "<group>"; };
-		030BE68319ACBAE500DD66CB /* FLCommandLineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCommandLineClient.h; sourceTree = "<group>"; };
-		030BE68419ACBAE500DD66CB /* FLCommandLineClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCommandLineClient.m; sourceTree = "<group>"; };
-		030BE68519ACBAE500DD66CB /* FLJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLJsonParser.h; sourceTree = "<group>"; };
-		030BE68619ACBAE500DD66CB /* FLJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLJsonParser.m; sourceTree = "<group>"; };
-		030BE68719ACBAE500DD66CB /* FLLogSanitization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLogSanitization.h; sourceTree = "<group>"; };
-		030BE68819ACBAE500DD66CB /* FLLogSanitization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLogSanitization.m; sourceTree = "<group>"; };
-		030BE68919ACBAE500DD66CB /* FLSortedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSortedArray.h; sourceTree = "<group>"; };
-		030BE68A19ACBAE500DD66CB /* FLSortedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSortedArray.m; sourceTree = "<group>"; };
-		030BE68B19ACBAE500DD66CB /* FLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUtils.h; sourceTree = "<group>"; };
-		030BE68C19ACBAE500DD66CB /* FLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUtils.m; sourceTree = "<group>"; };
-		030BE68D19ACBAE500DD66CB /* FLXMLComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXMLComposer.h; sourceTree = "<group>"; };
-		030BE68E19ACBAE500DD66CB /* FLXMLComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXMLComposer.m; sourceTree = "<group>"; };
+		030BE70219ADDB6C00DD66CB /* FLApi+Actions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLApi+Actions.h"; sourceTree = "<group>"; };
+		030BE70319ADDB6C00DD66CB /* FLApi+Actions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLApi+Actions.m"; sourceTree = "<group>"; };
+		030BE70419ADDB6C00DD66CB /* FLApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApi.h; sourceTree = "<group>"; };
+		030BE70519ADDB6C00DD66CB /* FLApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApi.m; sourceTree = "<group>"; };
+		030BE70619ADDB6C00DD66CB /* FLApiInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiInternal.h; sourceTree = "<group>"; };
+		030BE70719ADDB6C00DD66CB /* FLApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiRequest.h; sourceTree = "<group>"; };
+		030BE70819ADDB6C00DD66CB /* FLApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApiRequest.m; sourceTree = "<group>"; };
+		030BE70919ADDB6C00DD66CB /* FLApiStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiStats.h; sourceTree = "<group>"; };
+		030BE70A19ADDB6C00DD66CB /* FLApiStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApiStats.m; sourceTree = "<group>"; };
+		030BE70B19ADDB6C00DD66CB /* FLClassificators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLClassificators.h; sourceTree = "<group>"; };
+		030BE70C19ADDB6C00DD66CB /* FLClassificators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLClassificators.m; sourceTree = "<group>"; };
+		030BE70D19ADDB6C00DD66CB /* FLEmoticonMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEmoticonMap.h; sourceTree = "<group>"; };
+		030BE70E19ADDB6C00DD66CB /* FLEmoticonMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEmoticonMap.m; sourceTree = "<group>"; };
+		030BE70F19ADDB6C00DD66CB /* FLFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFileDownloader.h; sourceTree = "<group>"; };
+		030BE71019ADDB6C00DD66CB /* FLFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFileDownloader.m; sourceTree = "<group>"; };
+		030BE71119ADDB6C00DD66CB /* FLFileUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFileUploader.h; sourceTree = "<group>"; };
+		030BE71219ADDB6C00DD66CB /* FLFileUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFileUploader.m; sourceTree = "<group>"; };
+		030BE71319ADDB6C00DD66CB /* FLMarkupEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMarkupEncoder.h; sourceTree = "<group>"; };
+		030BE71419ADDB6C00DD66CB /* FLMarkupEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMarkupEncoder.m; sourceTree = "<group>"; };
+		030BE71519ADDB6C00DD66CB /* FLMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessageParser.h; sourceTree = "<group>"; };
+		030BE71619ADDB6C00DD66CB /* FLMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessageParser.m; sourceTree = "<group>"; };
+		030BE71719ADDB6C00DD66CB /* FLMessageStripper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessageStripper.h; sourceTree = "<group>"; };
+		030BE71819ADDB6C00DD66CB /* FLMessageStripper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessageStripper.m; sourceTree = "<group>"; };
+		030BE71919ADDB6C00DD66CB /* FLNetworkOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkOperations.h; sourceTree = "<group>"; };
+		030BE71A19ADDB6C00DD66CB /* FLNetworkOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkOperations.m; sourceTree = "<group>"; };
+		030BE71B19ADDB6C00DD66CB /* FLUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUserCredentials.h; sourceTree = "<group>"; };
+		030BE71C19ADDB6C00DD66CB /* FLUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUserCredentials.m; sourceTree = "<group>"; };
+		030BE71D19ADDB6C00DD66CB /* FLUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUserProfile.h; sourceTree = "<group>"; };
+		030BE71E19ADDB6C00DD66CB /* FLUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUserProfile.m; sourceTree = "<group>"; };
+		030BE71F19ADDB6C00DD66CB /* syntax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = syntax.json; sourceTree = "<group>"; };
+		030BE72119ADDB6C00DD66CB /* FLObfuscator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLObfuscator.h; sourceTree = "<group>"; };
+		030BE72219ADDB6C00DD66CB /* FLObfuscator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLObfuscator.m; sourceTree = "<group>"; };
+		030BE72319ADDB6C00DD66CB /* FLTeeURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLTeeURLConnection.h; sourceTree = "<group>"; };
+		030BE72419ADDB6C00DD66CB /* FLTeeURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLTeeURLConnection.m; sourceTree = "<group>"; };
+		030BE72619ADDB6C00DD66CB /* FLCommandLineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCommandLineClient.h; sourceTree = "<group>"; };
+		030BE72719ADDB6C00DD66CB /* FLCommandLineClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCommandLineClient.m; sourceTree = "<group>"; };
+		030BE72819ADDB6C00DD66CB /* FLJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLJsonParser.h; sourceTree = "<group>"; };
+		030BE72919ADDB6C00DD66CB /* FLJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLJsonParser.m; sourceTree = "<group>"; };
+		030BE72A19ADDB6C00DD66CB /* FLLogSanitization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLogSanitization.h; sourceTree = "<group>"; };
+		030BE72B19ADDB6C00DD66CB /* FLLogSanitization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLogSanitization.m; sourceTree = "<group>"; };
+		030BE72C19ADDB6C00DD66CB /* FLSortedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSortedArray.h; sourceTree = "<group>"; };
+		030BE72D19ADDB6C00DD66CB /* FLSortedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSortedArray.m; sourceTree = "<group>"; };
+		030BE72E19ADDB6C00DD66CB /* FLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUtils.h; sourceTree = "<group>"; };
+		030BE72F19ADDB6C00DD66CB /* FLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUtils.m; sourceTree = "<group>"; };
+		030BE73019ADDB6C00DD66CB /* FLXMLComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXMLComposer.h; sourceTree = "<group>"; };
+		030BE73119ADDB6C00DD66CB /* FLXMLComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXMLComposer.m; sourceTree = "<group>"; };
 		03292C5417B24FD700ADA326 /* RSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSParser.h; sourceTree = "<group>"; };
 		03292C5517B24FD700ADA326 /* RSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSParser.m; sourceTree = "<group>"; };
 		03292C5717B252B400ADA326 /* ContentParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentParser.h; sourceTree = "<group>"; };
@@ -148,80 +148,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		030BE63419ACBAE500DD66CB /* FleepKit */ = {
+		030BE70019ADDB6C00DD66CB /* FleepKit */ = {
 			isa = PBXGroup;
 			children = (
-				030BE63519ACBAE500DD66CB /* FleepApi */,
-				030BE67D19ACBAE500DD66CB /* TestingAids */,
-				030BE68219ACBAE500DD66CB /* Utils */,
+				030BE70119ADDB6C00DD66CB /* FleepApi */,
+				030BE72019ADDB6C00DD66CB /* TestingAids */,
+				030BE72519ADDB6C00DD66CB /* Utils */,
 			);
 			name = FleepKit;
-			path = ../../ios_client/Fleep/FleepKit;
+			path = ../../FleepKit;
 			sourceTree = "<group>";
 		};
-		030BE63519ACBAE500DD66CB /* FleepApi */ = {
+		030BE70119ADDB6C00DD66CB /* FleepApi */ = {
 			isa = PBXGroup;
 			children = (
-				030BE63619ACBAE500DD66CB /* FLApi+Actions.h */,
-				030BE63719ACBAE500DD66CB /* FLApi+Actions.m */,
-				030BE63819ACBAE500DD66CB /* FLApi.h */,
-				030BE63919ACBAE500DD66CB /* FLApi.m */,
-				030BE63A19ACBAE500DD66CB /* FLApiInternal.h */,
-				030BE63B19ACBAE500DD66CB /* FLApiRequest.h */,
-				030BE63C19ACBAE500DD66CB /* FLApiRequest.m */,
-				030BE63D19ACBAE500DD66CB /* FLApiStats.h */,
-				030BE63E19ACBAE500DD66CB /* FLApiStats.m */,
-				030BE63F19ACBAE500DD66CB /* FLClassificators.h */,
-				030BE64019ACBAE500DD66CB /* FLClassificators.m */,
-				030BE64119ACBAE500DD66CB /* FLEmoticonMap.h */,
-				030BE64219ACBAE500DD66CB /* FLEmoticonMap.m */,
-				030BE64319ACBAE500DD66CB /* FLFileDownloader.h */,
-				030BE64419ACBAE500DD66CB /* FLFileDownloader.m */,
-				030BE64519ACBAE500DD66CB /* FLFileUploader.h */,
-				030BE64619ACBAE500DD66CB /* FLFileUploader.m */,
-				030BE64719ACBAE500DD66CB /* FLMarkupEncoder.h */,
-				030BE64819ACBAE500DD66CB /* FLMarkupEncoder.m */,
-				030BE64919ACBAE500DD66CB /* FLMessageParser.h */,
-				030BE64A19ACBAE500DD66CB /* FLMessageParser.m */,
-				030BE64B19ACBAE500DD66CB /* FLMessageStripper.h */,
-				030BE64C19ACBAE500DD66CB /* FLMessageStripper.m */,
-				030BE64D19ACBAE500DD66CB /* FLNetworkOperations.h */,
-				030BE64E19ACBAE500DD66CB /* FLNetworkOperations.m */,
-				030BE64F19ACBAE500DD66CB /* FLUserCredentials.h */,
-				030BE65019ACBAE500DD66CB /* FLUserCredentials.m */,
-				030BE65119ACBAE500DD66CB /* FLUserProfile.h */,
-				030BE65219ACBAE500DD66CB /* FLUserProfile.m */,
-				030BE65319ACBAE500DD66CB /* syntax.json */,
+				030BE70219ADDB6C00DD66CB /* FLApi+Actions.h */,
+				030BE70319ADDB6C00DD66CB /* FLApi+Actions.m */,
+				030BE70419ADDB6C00DD66CB /* FLApi.h */,
+				030BE70519ADDB6C00DD66CB /* FLApi.m */,
+				030BE70619ADDB6C00DD66CB /* FLApiInternal.h */,
+				030BE70719ADDB6C00DD66CB /* FLApiRequest.h */,
+				030BE70819ADDB6C00DD66CB /* FLApiRequest.m */,
+				030BE70919ADDB6C00DD66CB /* FLApiStats.h */,
+				030BE70A19ADDB6C00DD66CB /* FLApiStats.m */,
+				030BE70B19ADDB6C00DD66CB /* FLClassificators.h */,
+				030BE70C19ADDB6C00DD66CB /* FLClassificators.m */,
+				030BE70D19ADDB6C00DD66CB /* FLEmoticonMap.h */,
+				030BE70E19ADDB6C00DD66CB /* FLEmoticonMap.m */,
+				030BE70F19ADDB6C00DD66CB /* FLFileDownloader.h */,
+				030BE71019ADDB6C00DD66CB /* FLFileDownloader.m */,
+				030BE71119ADDB6C00DD66CB /* FLFileUploader.h */,
+				030BE71219ADDB6C00DD66CB /* FLFileUploader.m */,
+				030BE71319ADDB6C00DD66CB /* FLMarkupEncoder.h */,
+				030BE71419ADDB6C00DD66CB /* FLMarkupEncoder.m */,
+				030BE71519ADDB6C00DD66CB /* FLMessageParser.h */,
+				030BE71619ADDB6C00DD66CB /* FLMessageParser.m */,
+				030BE71719ADDB6C00DD66CB /* FLMessageStripper.h */,
+				030BE71819ADDB6C00DD66CB /* FLMessageStripper.m */,
+				030BE71919ADDB6C00DD66CB /* FLNetworkOperations.h */,
+				030BE71A19ADDB6C00DD66CB /* FLNetworkOperations.m */,
+				030BE71B19ADDB6C00DD66CB /* FLUserCredentials.h */,
+				030BE71C19ADDB6C00DD66CB /* FLUserCredentials.m */,
+				030BE71D19ADDB6C00DD66CB /* FLUserProfile.h */,
+				030BE71E19ADDB6C00DD66CB /* FLUserProfile.m */,
+				030BE71F19ADDB6C00DD66CB /* syntax.json */,
 			);
 			path = FleepApi;
 			sourceTree = "<group>";
 		};
-		030BE67D19ACBAE500DD66CB /* TestingAids */ = {
+		030BE72019ADDB6C00DD66CB /* TestingAids */ = {
 			isa = PBXGroup;
 			children = (
-				030BE67E19ACBAE500DD66CB /* FLObfuscator.h */,
-				030BE67F19ACBAE500DD66CB /* FLObfuscator.m */,
-				030BE68019ACBAE500DD66CB /* FLTeeURLConnection.h */,
-				030BE68119ACBAE500DD66CB /* FLTeeURLConnection.m */,
+				030BE72119ADDB6C00DD66CB /* FLObfuscator.h */,
+				030BE72219ADDB6C00DD66CB /* FLObfuscator.m */,
+				030BE72319ADDB6C00DD66CB /* FLTeeURLConnection.h */,
+				030BE72419ADDB6C00DD66CB /* FLTeeURLConnection.m */,
 			);
 			path = TestingAids;
 			sourceTree = "<group>";
 		};
-		030BE68219ACBAE500DD66CB /* Utils */ = {
+		030BE72519ADDB6C00DD66CB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				030BE68319ACBAE500DD66CB /* FLCommandLineClient.h */,
-				030BE68419ACBAE500DD66CB /* FLCommandLineClient.m */,
-				030BE68519ACBAE500DD66CB /* FLJsonParser.h */,
-				030BE68619ACBAE500DD66CB /* FLJsonParser.m */,
-				030BE68719ACBAE500DD66CB /* FLLogSanitization.h */,
-				030BE68819ACBAE500DD66CB /* FLLogSanitization.m */,
-				030BE68919ACBAE500DD66CB /* FLSortedArray.h */,
-				030BE68A19ACBAE500DD66CB /* FLSortedArray.m */,
-				030BE68B19ACBAE500DD66CB /* FLUtils.h */,
-				030BE68C19ACBAE500DD66CB /* FLUtils.m */,
-				030BE68D19ACBAE500DD66CB /* FLXMLComposer.h */,
-				030BE68E19ACBAE500DD66CB /* FLXMLComposer.m */,
+				030BE72619ADDB6C00DD66CB /* FLCommandLineClient.h */,
+				030BE72719ADDB6C00DD66CB /* FLCommandLineClient.m */,
+				030BE72819ADDB6C00DD66CB /* FLJsonParser.h */,
+				030BE72919ADDB6C00DD66CB /* FLJsonParser.m */,
+				030BE72A19ADDB6C00DD66CB /* FLLogSanitization.h */,
+				030BE72B19ADDB6C00DD66CB /* FLLogSanitization.m */,
+				030BE72C19ADDB6C00DD66CB /* FLSortedArray.h */,
+				030BE72D19ADDB6C00DD66CB /* FLSortedArray.m */,
+				030BE72E19ADDB6C00DD66CB /* FLUtils.h */,
+				030BE72F19ADDB6C00DD66CB /* FLUtils.m */,
+				030BE73019ADDB6C00DD66CB /* FLXMLComposer.h */,
+				030BE73119ADDB6C00DD66CB /* FLXMLComposer.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 		03FC4E3817ABD87D0038469A /* FleepReader */ = {
 			isa = PBXGroup;
 			children = (
-				030BE63419ACBAE500DD66CB /* FleepKit */,
+				030BE70019ADDB6C00DD66CB /* FleepKit */,
 				03FC4E3917ABD87D0038469A /* main.m */,
 				03FC4E7817ABDFEF0038469A /* ReaderApi.h */,
 				03FC4E7917ABDFEF0038469A /* ReaderApi.m */,
@@ -318,7 +318,7 @@
 		03FC4E2917ABD87D0038469A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Fleep Technologies Ltd";
 			};
 			buildConfigurationList = 03FC4E2C17ABD87D0038469A /* Build configuration list for PBXProject "FleepReader" */;
@@ -343,39 +343,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030BE69919ACBAE500DD66CB /* FLMessageStripper.m in Sources */,
-				030BE69419ACBAE500DD66CB /* FLEmoticonMap.m in Sources */,
+				030BE74219ADDB6C00DD66CB /* FLCommandLineClient.m in Sources */,
+				030BE74019ADDB6C00DD66CB /* FLObfuscator.m in Sources */,
+				030BE73C19ADDB6C00DD66CB /* FLMessageStripper.m in Sources */,
+				030BE74119ADDB6C00DD66CB /* FLTeeURLConnection.m in Sources */,
+				030BE73719ADDB6C00DD66CB /* FLEmoticonMap.m in Sources */,
 				03FC4E3A17ABD87D0038469A /* main.m in Sources */,
-				030BE69819ACBAE500DD66CB /* FLMessageParser.m in Sources */,
-				030BE69119ACBAE500DD66CB /* FLApiRequest.m in Sources */,
-				030BE6B519ACBAE500DD66CB /* FLSortedArray.m in Sources */,
-				030BE69219ACBAE500DD66CB /* FLApiStats.m in Sources */,
-				030BE6B719ACBAE500DD66CB /* FLXMLComposer.m in Sources */,
-				030BE69519ACBAE500DD66CB /* FLFileDownloader.m in Sources */,
-				030BE6B119ACBAE500DD66CB /* FLTeeURLConnection.m in Sources */,
+				030BE73B19ADDB6C00DD66CB /* FLMessageParser.m in Sources */,
+				030BE73419ADDB6C00DD66CB /* FLApiRequest.m in Sources */,
+				030BE73519ADDB6C00DD66CB /* FLApiStats.m in Sources */,
+				030BE73819ADDB6C00DD66CB /* FLFileDownloader.m in Sources */,
 				03FC4E3F17ABD87D0038469A /* FleepReader.xcdatamodeld in Sources */,
-				030BE6B419ACBAE500DD66CB /* FLLogSanitization.m in Sources */,
 				03FC4E6817ABDABC0038469A /* Article.m in Sources */,
+				030BE74519ADDB6C00DD66CB /* FLSortedArray.m in Sources */,
 				03FC4E6B17ABDADD0038469A /* UserSubscription.m in Sources */,
 				03FC4E6E17ABDADE0038469A /* Feed.m in Sources */,
 				03FC4E7717ABDDE70038469A /* DataModel.m in Sources */,
 				03FC4E7A17ABDFEF0038469A /* ReaderApi.m in Sources */,
-				030BE68F19ACBAE500DD66CB /* FLApi+Actions.m in Sources */,
-				030BE6B619ACBAE500DD66CB /* FLUtils.m in Sources */,
-				030BE69C19ACBAE500DD66CB /* FLUserProfile.m in Sources */,
+				030BE73219ADDB6C00DD66CB /* FLApi+Actions.m in Sources */,
+				030BE73F19ADDB6C00DD66CB /* FLUserProfile.m in Sources */,
 				03FC4E7D17ABF66D0038469A /* User.m in Sources */,
-				030BE6B319ACBAE500DD66CB /* FLJsonParser.m in Sources */,
-				030BE69619ACBAE500DD66CB /* FLFileUploader.m in Sources */,
-				030BE69A19ACBAE500DD66CB /* FLNetworkOperations.m in Sources */,
+				030BE73919ADDB6C00DD66CB /* FLFileUploader.m in Sources */,
+				030BE73D19ADDB6C00DD66CB /* FLNetworkOperations.m in Sources */,
+				030BE74419ADDB6C00DD66CB /* FLLogSanitization.m in Sources */,
+				030BE74619ADDB6C00DD66CB /* FLUtils.m in Sources */,
 				03292C5617B24FD800ADA326 /* RSSParser.m in Sources */,
-				030BE69719ACBAE500DD66CB /* FLMarkupEncoder.m in Sources */,
-				030BE69B19ACBAE500DD66CB /* FLUserCredentials.m in Sources */,
-				030BE6B019ACBAE500DD66CB /* FLObfuscator.m in Sources */,
+				030BE74719ADDB6C00DD66CB /* FLXMLComposer.m in Sources */,
+				030BE73A19ADDB6C00DD66CB /* FLMarkupEncoder.m in Sources */,
+				030BE73E19ADDB6C00DD66CB /* FLUserCredentials.m in Sources */,
 				03292C5917B252B500ADA326 /* ContentParser.m in Sources */,
-				030BE69319ACBAE500DD66CB /* FLClassificators.m in Sources */,
-				030BE6B219ACBAE500DD66CB /* FLCommandLineClient.m in Sources */,
+				030BE73619ADDB6C00DD66CB /* FLClassificators.m in Sources */,
 				03292C5C17B2572F00ADA326 /* FeedRequest.m in Sources */,
-				030BE69019ACBAE500DD66CB /* FLApi.m in Sources */,
+				030BE73319ADDB6C00DD66CB /* FLApi.m in Sources */,
+				030BE74319ADDB6C00DD66CB /* FLJsonParser.m in Sources */,
 				03292C5F17B37A6600ADA326 /* OPMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +387,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -420,7 +419,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
