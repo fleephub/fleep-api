@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Article" representedClassName="Article" syncable="YES">
+        <attribute name="article_nr" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="body" attributeType="String" syncable="YES"/>
+        <attribute name="feed_id" attributeType="String" syncable="YES"/>
+        <attribute name="guid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="feed_id"/>
+                <index value="article_nr"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <entity name="Feed" representedClassName="Feed" syncable="YES">
+        <attribute name="failure_count" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="feed_id" attributeType="String" syncable="YES"/>
+        <attribute name="last_checked" attributeType="Date" syncable="YES"/>
+        <attribute name="status" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="update_interval" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="feed_id"/>
+            </compoundIndex>
+            <compoundIndex>
+                <index value="url"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="contact_id" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="contact_id"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <entity name="UserSubscription" representedClassName="UserSubscription" syncable="YES">
+        <attribute name="contact_id" attributeType="String" syncable="YES"/>
+        <attribute name="conversation_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feed_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="read_message_nr" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="contact_id"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <elements>
+        <element name="Article" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Feed" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="User" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="UserSubscription" positionX="160" positionY="192" width="128" height="105"/>
+    </elements>
+</model>

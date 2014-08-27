@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		030BE68F19ACBAE500DD66CB /* FLApi+Actions.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63719ACBAE500DD66CB /* FLApi+Actions.m */; };
+		030BE69019ACBAE500DD66CB /* FLApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63919ACBAE500DD66CB /* FLApi.m */; };
+		030BE69119ACBAE500DD66CB /* FLApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63C19ACBAE500DD66CB /* FLApiRequest.m */; };
+		030BE69219ACBAE500DD66CB /* FLApiStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE63E19ACBAE500DD66CB /* FLApiStats.m */; };
+		030BE69319ACBAE500DD66CB /* FLClassificators.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64019ACBAE500DD66CB /* FLClassificators.m */; };
+		030BE69419ACBAE500DD66CB /* FLEmoticonMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64219ACBAE500DD66CB /* FLEmoticonMap.m */; };
+		030BE69519ACBAE500DD66CB /* FLFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64419ACBAE500DD66CB /* FLFileDownloader.m */; };
+		030BE69619ACBAE500DD66CB /* FLFileUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64619ACBAE500DD66CB /* FLFileUploader.m */; };
+		030BE69719ACBAE500DD66CB /* FLMarkupEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64819ACBAE500DD66CB /* FLMarkupEncoder.m */; };
+		030BE69819ACBAE500DD66CB /* FLMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64A19ACBAE500DD66CB /* FLMessageParser.m */; };
+		030BE69919ACBAE500DD66CB /* FLMessageStripper.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64C19ACBAE500DD66CB /* FLMessageStripper.m */; };
+		030BE69A19ACBAE500DD66CB /* FLNetworkOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE64E19ACBAE500DD66CB /* FLNetworkOperations.m */; };
+		030BE69B19ACBAE500DD66CB /* FLUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE65019ACBAE500DD66CB /* FLUserCredentials.m */; };
+		030BE69C19ACBAE500DD66CB /* FLUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE65219ACBAE500DD66CB /* FLUserProfile.m */; };
+		030BE6B019ACBAE500DD66CB /* FLObfuscator.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE67F19ACBAE500DD66CB /* FLObfuscator.m */; };
+		030BE6B119ACBAE500DD66CB /* FLTeeURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68119ACBAE500DD66CB /* FLTeeURLConnection.m */; };
+		030BE6B219ACBAE500DD66CB /* FLCommandLineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68419ACBAE500DD66CB /* FLCommandLineClient.m */; };
+		030BE6B319ACBAE500DD66CB /* FLJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68619ACBAE500DD66CB /* FLJsonParser.m */; };
+		030BE6B419ACBAE500DD66CB /* FLLogSanitization.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68819ACBAE500DD66CB /* FLLogSanitization.m */; };
+		030BE6B519ACBAE500DD66CB /* FLSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68A19ACBAE500DD66CB /* FLSortedArray.m */; };
+		030BE6B619ACBAE500DD66CB /* FLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68C19ACBAE500DD66CB /* FLUtils.m */; };
+		030BE6B719ACBAE500DD66CB /* FLXMLComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 030BE68E19ACBAE500DD66CB /* FLXMLComposer.m */; };
+		03292C5617B24FD800ADA326 /* RSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 03292C5517B24FD700ADA326 /* RSSParser.m */; };
+		03292C5917B252B500ADA326 /* ContentParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 03292C5817B252B400ADA326 /* ContentParser.m */; };
+		03292C5C17B2572F00ADA326 /* FeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 03292C5B17B2572F00ADA326 /* FeedRequest.m */; };
+		03292C5F17B37A6600ADA326 /* OPMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 03292C5E17B37A6500ADA326 /* OPMLParser.m */; };
+		03FC4E3517ABD87D0038469A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC4E3417ABD87D0038469A /* CoreData.framework */; };
+		03FC4E3717ABD87D0038469A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FC4E3617ABD87D0038469A /* Foundation.framework */; };
+		03FC4E3A17ABD87D0038469A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E3917ABD87D0038469A /* main.m */; };
+		03FC4E3F17ABD87D0038469A /* FleepReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E3D17ABD87D0038469A /* FleepReader.xcdatamodeld */; };
+		03FC4E4117ABD87D0038469A /* FleepReader.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03FC4E4017ABD87D0038469A /* FleepReader.1 */; };
+		03FC4E6817ABDABC0038469A /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E6717ABDABC0038469A /* Article.m */; };
+		03FC4E6B17ABDADD0038469A /* UserSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E6A17ABDADD0038469A /* UserSubscription.m */; };
+		03FC4E6E17ABDADE0038469A /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E6D17ABDADE0038469A /* Feed.m */; };
+		03FC4E7717ABDDE70038469A /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E7617ABDDE70038469A /* DataModel.m */; };
+		03FC4E7A17ABDFEF0038469A /* ReaderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E7917ABDFEF0038469A /* ReaderApi.m */; };
+		03FC4E7D17ABF66D0038469A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC4E7C17ABF66D0038469A /* User.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03FC4E2F17ABD87D0038469A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				03FC4E4117ABD87D0038469A /* FleepReader.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		030BE63619ACBAE500DD66CB /* FLApi+Actions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FLApi+Actions.h"; sourceTree = "<group>"; };
+		030BE63719ACBAE500DD66CB /* FLApi+Actions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FLApi+Actions.m"; sourceTree = "<group>"; };
+		030BE63819ACBAE500DD66CB /* FLApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApi.h; sourceTree = "<group>"; };
+		030BE63919ACBAE500DD66CB /* FLApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApi.m; sourceTree = "<group>"; };
+		030BE63A19ACBAE500DD66CB /* FLApiInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiInternal.h; sourceTree = "<group>"; };
+		030BE63B19ACBAE500DD66CB /* FLApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiRequest.h; sourceTree = "<group>"; };
+		030BE63C19ACBAE500DD66CB /* FLApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApiRequest.m; sourceTree = "<group>"; };
+		030BE63D19ACBAE500DD66CB /* FLApiStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLApiStats.h; sourceTree = "<group>"; };
+		030BE63E19ACBAE500DD66CB /* FLApiStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLApiStats.m; sourceTree = "<group>"; };
+		030BE63F19ACBAE500DD66CB /* FLClassificators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLClassificators.h; sourceTree = "<group>"; };
+		030BE64019ACBAE500DD66CB /* FLClassificators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLClassificators.m; sourceTree = "<group>"; };
+		030BE64119ACBAE500DD66CB /* FLEmoticonMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEmoticonMap.h; sourceTree = "<group>"; };
+		030BE64219ACBAE500DD66CB /* FLEmoticonMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEmoticonMap.m; sourceTree = "<group>"; };
+		030BE64319ACBAE500DD66CB /* FLFileDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFileDownloader.h; sourceTree = "<group>"; };
+		030BE64419ACBAE500DD66CB /* FLFileDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFileDownloader.m; sourceTree = "<group>"; };
+		030BE64519ACBAE500DD66CB /* FLFileUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFileUploader.h; sourceTree = "<group>"; };
+		030BE64619ACBAE500DD66CB /* FLFileUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFileUploader.m; sourceTree = "<group>"; };
+		030BE64719ACBAE500DD66CB /* FLMarkupEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMarkupEncoder.h; sourceTree = "<group>"; };
+		030BE64819ACBAE500DD66CB /* FLMarkupEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMarkupEncoder.m; sourceTree = "<group>"; };
+		030BE64919ACBAE500DD66CB /* FLMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessageParser.h; sourceTree = "<group>"; };
+		030BE64A19ACBAE500DD66CB /* FLMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessageParser.m; sourceTree = "<group>"; };
+		030BE64B19ACBAE500DD66CB /* FLMessageStripper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLMessageStripper.h; sourceTree = "<group>"; };
+		030BE64C19ACBAE500DD66CB /* FLMessageStripper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLMessageStripper.m; sourceTree = "<group>"; };
+		030BE64D19ACBAE500DD66CB /* FLNetworkOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNetworkOperations.h; sourceTree = "<group>"; };
+		030BE64E19ACBAE500DD66CB /* FLNetworkOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNetworkOperations.m; sourceTree = "<group>"; };
+		030BE64F19ACBAE500DD66CB /* FLUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUserCredentials.h; sourceTree = "<group>"; };
+		030BE65019ACBAE500DD66CB /* FLUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUserCredentials.m; sourceTree = "<group>"; };
+		030BE65119ACBAE500DD66CB /* FLUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUserProfile.h; sourceTree = "<group>"; };
+		030BE65219ACBAE500DD66CB /* FLUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUserProfile.m; sourceTree = "<group>"; };
+		030BE65319ACBAE500DD66CB /* syntax.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = syntax.json; sourceTree = "<group>"; };
+		030BE67E19ACBAE500DD66CB /* FLObfuscator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLObfuscator.h; sourceTree = "<group>"; };
+		030BE67F19ACBAE500DD66CB /* FLObfuscator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLObfuscator.m; sourceTree = "<group>"; };
+		030BE68019ACBAE500DD66CB /* FLTeeURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLTeeURLConnection.h; sourceTree = "<group>"; };
+		030BE68119ACBAE500DD66CB /* FLTeeURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLTeeURLConnection.m; sourceTree = "<group>"; };
+		030BE68319ACBAE500DD66CB /* FLCommandLineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCommandLineClient.h; sourceTree = "<group>"; };
+		030BE68419ACBAE500DD66CB /* FLCommandLineClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCommandLineClient.m; sourceTree = "<group>"; };
+		030BE68519ACBAE500DD66CB /* FLJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLJsonParser.h; sourceTree = "<group>"; };
+		030BE68619ACBAE500DD66CB /* FLJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLJsonParser.m; sourceTree = "<group>"; };
+		030BE68719ACBAE500DD66CB /* FLLogSanitization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLLogSanitization.h; sourceTree = "<group>"; };
+		030BE68819ACBAE500DD66CB /* FLLogSanitization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLLogSanitization.m; sourceTree = "<group>"; };
+		030BE68919ACBAE500DD66CB /* FLSortedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSortedArray.h; sourceTree = "<group>"; };
+		030BE68A19ACBAE500DD66CB /* FLSortedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSortedArray.m; sourceTree = "<group>"; };
+		030BE68B19ACBAE500DD66CB /* FLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLUtils.h; sourceTree = "<group>"; };
+		030BE68C19ACBAE500DD66CB /* FLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLUtils.m; sourceTree = "<group>"; };
+		030BE68D19ACBAE500DD66CB /* FLXMLComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLXMLComposer.h; sourceTree = "<group>"; };
+		030BE68E19ACBAE500DD66CB /* FLXMLComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLXMLComposer.m; sourceTree = "<group>"; };
+		03292C5417B24FD700ADA326 /* RSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSParser.h; sourceTree = "<group>"; };
+		03292C5517B24FD700ADA326 /* RSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSParser.m; sourceTree = "<group>"; };
+		03292C5717B252B400ADA326 /* ContentParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentParser.h; sourceTree = "<group>"; };
+		03292C5817B252B400ADA326 /* ContentParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentParser.m; sourceTree = "<group>"; };
+		03292C5A17B2572E00ADA326 /* FeedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedRequest.h; sourceTree = "<group>"; };
+		03292C5B17B2572F00ADA326 /* FeedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedRequest.m; sourceTree = "<group>"; };
+		03292C5D17B37A6400ADA326 /* OPMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMLParser.h; sourceTree = "<group>"; };
+		03292C5E17B37A6500ADA326 /* OPMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLParser.m; sourceTree = "<group>"; };
+		03FC4E3117ABD87D0038469A /* FleepReader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FleepReader; sourceTree = BUILT_PRODUCTS_DIR; };
+		03FC4E3417ABD87D0038469A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		03FC4E3617ABD87D0038469A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03FC4E3917ABD87D0038469A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03FC4E3C17ABD87D0038469A /* FleepReader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FleepReader-Prefix.pch"; sourceTree = "<group>"; };
+		03FC4E3E17ABD87D0038469A /* FleepReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FleepReader.xcdatamodel; sourceTree = "<group>"; };
+		03FC4E4017ABD87D0038469A /* FleepReader.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FleepReader.1; sourceTree = "<group>"; };
+		03FC4E6617ABDABC0038469A /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		03FC4E6717ABDABC0038469A /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		03FC4E6917ABDADD0038469A /* UserSubscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSubscription.h; sourceTree = "<group>"; };
+		03FC4E6A17ABDADD0038469A /* UserSubscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSubscription.m; sourceTree = "<group>"; };
+		03FC4E6C17ABDADE0038469A /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		03FC4E6D17ABDADE0038469A /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		03FC4E7517ABDDE70038469A /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		03FC4E7617ABDDE70038469A /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		03FC4E7817ABDFEF0038469A /* ReaderApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderApi.h; sourceTree = "<group>"; };
+		03FC4E7917ABDFEF0038469A /* ReaderApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderApi.m; sourceTree = "<group>"; };
+		03FC4E7B17ABF66D0038469A /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		03FC4E7C17ABF66D0038469A /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03FC4E2E17ABD87D0038469A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FC4E3517ABD87D0038469A /* CoreData.framework in Frameworks */,
+				03FC4E3717ABD87D0038469A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		030BE63419ACBAE500DD66CB /* FleepKit */ = {
+			isa = PBXGroup;
+			children = (
+				030BE63519ACBAE500DD66CB /* FleepApi */,
+				030BE67D19ACBAE500DD66CB /* TestingAids */,
+				030BE68219ACBAE500DD66CB /* Utils */,
+			);
+			name = FleepKit;
+			path = ../../ios_client/Fleep/FleepKit;
+			sourceTree = "<group>";
+		};
+		030BE63519ACBAE500DD66CB /* FleepApi */ = {
+			isa = PBXGroup;
+			children = (
+				030BE63619ACBAE500DD66CB /* FLApi+Actions.h */,
+				030BE63719ACBAE500DD66CB /* FLApi+Actions.m */,
+				030BE63819ACBAE500DD66CB /* FLApi.h */,
+				030BE63919ACBAE500DD66CB /* FLApi.m */,
+				030BE63A19ACBAE500DD66CB /* FLApiInternal.h */,
+				030BE63B19ACBAE500DD66CB /* FLApiRequest.h */,
+				030BE63C19ACBAE500DD66CB /* FLApiRequest.m */,
+				030BE63D19ACBAE500DD66CB /* FLApiStats.h */,
+				030BE63E19ACBAE500DD66CB /* FLApiStats.m */,
+				030BE63F19ACBAE500DD66CB /* FLClassificators.h */,
+				030BE64019ACBAE500DD66CB /* FLClassificators.m */,
+				030BE64119ACBAE500DD66CB /* FLEmoticonMap.h */,
+				030BE64219ACBAE500DD66CB /* FLEmoticonMap.m */,
+				030BE64319ACBAE500DD66CB /* FLFileDownloader.h */,
+				030BE64419ACBAE500DD66CB /* FLFileDownloader.m */,
+				030BE64519ACBAE500DD66CB /* FLFileUploader.h */,
+				030BE64619ACBAE500DD66CB /* FLFileUploader.m */,
+				030BE64719ACBAE500DD66CB /* FLMarkupEncoder.h */,
+				030BE64819ACBAE500DD66CB /* FLMarkupEncoder.m */,
+				030BE64919ACBAE500DD66CB /* FLMessageParser.h */,
+				030BE64A19ACBAE500DD66CB /* FLMessageParser.m */,
+				030BE64B19ACBAE500DD66CB /* FLMessageStripper.h */,
+				030BE64C19ACBAE500DD66CB /* FLMessageStripper.m */,
+				030BE64D19ACBAE500DD66CB /* FLNetworkOperations.h */,
+				030BE64E19ACBAE500DD66CB /* FLNetworkOperations.m */,
+				030BE64F19ACBAE500DD66CB /* FLUserCredentials.h */,
+				030BE65019ACBAE500DD66CB /* FLUserCredentials.m */,
+				030BE65119ACBAE500DD66CB /* FLUserProfile.h */,
+				030BE65219ACBAE500DD66CB /* FLUserProfile.m */,
+				030BE65319ACBAE500DD66CB /* syntax.json */,
+			);
+			path = FleepApi;
+			sourceTree = "<group>";
+		};
+		030BE67D19ACBAE500DD66CB /* TestingAids */ = {
+			isa = PBXGroup;
+			children = (
+				030BE67E19ACBAE500DD66CB /* FLObfuscator.h */,
+				030BE67F19ACBAE500DD66CB /* FLObfuscator.m */,
+				030BE68019ACBAE500DD66CB /* FLTeeURLConnection.h */,
+				030BE68119ACBAE500DD66CB /* FLTeeURLConnection.m */,
+			);
+			path = TestingAids;
+			sourceTree = "<group>";
+		};
+		030BE68219ACBAE500DD66CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				030BE68319ACBAE500DD66CB /* FLCommandLineClient.h */,
+				030BE68419ACBAE500DD66CB /* FLCommandLineClient.m */,
+				030BE68519ACBAE500DD66CB /* FLJsonParser.h */,
+				030BE68619ACBAE500DD66CB /* FLJsonParser.m */,
+				030BE68719ACBAE500DD66CB /* FLLogSanitization.h */,
+				030BE68819ACBAE500DD66CB /* FLLogSanitization.m */,
+				030BE68919ACBAE500DD66CB /* FLSortedArray.h */,
+				030BE68A19ACBAE500DD66CB /* FLSortedArray.m */,
+				030BE68B19ACBAE500DD66CB /* FLUtils.h */,
+				030BE68C19ACBAE500DD66CB /* FLUtils.m */,
+				030BE68D19ACBAE500DD66CB /* FLXMLComposer.h */,
+				030BE68E19ACBAE500DD66CB /* FLXMLComposer.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		03FC4E2817ABD87D0038469A = {
+			isa = PBXGroup;
+			children = (
+				03FC4E3817ABD87D0038469A /* FleepReader */,
+				03FC4E3317ABD87D0038469A /* Frameworks */,
+				03FC4E3217ABD87D0038469A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03FC4E3217ABD87D0038469A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03FC4E3117ABD87D0038469A /* FleepReader */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03FC4E3317ABD87D0038469A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03FC4E3417ABD87D0038469A /* CoreData.framework */,
+				03FC4E3617ABD87D0038469A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03FC4E3817ABD87D0038469A /* FleepReader */ = {
+			isa = PBXGroup;
+			children = (
+				030BE63419ACBAE500DD66CB /* FleepKit */,
+				03FC4E3917ABD87D0038469A /* main.m */,
+				03FC4E7817ABDFEF0038469A /* ReaderApi.h */,
+				03FC4E7917ABDFEF0038469A /* ReaderApi.m */,
+				03FC4E7517ABDDE70038469A /* DataModel.h */,
+				03FC4E7617ABDDE70038469A /* DataModel.m */,
+				03FC4E4017ABD87D0038469A /* FleepReader.1 */,
+				03FC4E3D17ABD87D0038469A /* FleepReader.xcdatamodeld */,
+				03FC4E7B17ABF66D0038469A /* User.h */,
+				03FC4E7C17ABF66D0038469A /* User.m */,
+				03FC4E6C17ABDADE0038469A /* Feed.h */,
+				03FC4E6D17ABDADE0038469A /* Feed.m */,
+				03292C5A17B2572E00ADA326 /* FeedRequest.h */,
+				03292C5B17B2572F00ADA326 /* FeedRequest.m */,
+				03FC4E6917ABDADD0038469A /* UserSubscription.h */,
+				03FC4E6A17ABDADD0038469A /* UserSubscription.m */,
+				03FC4E3B17ABD87D0038469A /* Supporting Files */,
+				03FC4E6617ABDABC0038469A /* Article.h */,
+				03FC4E6717ABDABC0038469A /* Article.m */,
+				03292C5417B24FD700ADA326 /* RSSParser.h */,
+				03292C5517B24FD700ADA326 /* RSSParser.m */,
+				03292C5717B252B400ADA326 /* ContentParser.h */,
+				03292C5817B252B400ADA326 /* ContentParser.m */,
+				03292C5D17B37A6400ADA326 /* OPMLParser.h */,
+				03292C5E17B37A6500ADA326 /* OPMLParser.m */,
+			);
+			path = FleepReader;
+			sourceTree = "<group>";
+		};
+		03FC4E3B17ABD87D0038469A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03FC4E3C17ABD87D0038469A /* FleepReader-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03FC4E3017ABD87D0038469A /* FleepReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03FC4E4417ABD87D0038469A /* Build configuration list for PBXNativeTarget "FleepReader" */;
+			buildPhases = (
+				03FC4E2D17ABD87D0038469A /* Sources */,
+				03FC4E2E17ABD87D0038469A /* Frameworks */,
+				03FC4E2F17ABD87D0038469A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FleepReader;
+			productName = FleepReader;
+			productReference = 03FC4E3117ABD87D0038469A /* FleepReader */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03FC4E2917ABD87D0038469A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Fleep Technologies Ltd";
+			};
+			buildConfigurationList = 03FC4E2C17ABD87D0038469A /* Build configuration list for PBXProject "FleepReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03FC4E2817ABD87D0038469A;
+			productRefGroup = 03FC4E3217ABD87D0038469A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03FC4E3017ABD87D0038469A /* FleepReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03FC4E2D17ABD87D0038469A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				030BE69919ACBAE500DD66CB /* FLMessageStripper.m in Sources */,
+				030BE69419ACBAE500DD66CB /* FLEmoticonMap.m in Sources */,
+				03FC4E3A17ABD87D0038469A /* main.m in Sources */,
+				030BE69819ACBAE500DD66CB /* FLMessageParser.m in Sources */,
+				030BE69119ACBAE500DD66CB /* FLApiRequest.m in Sources */,
+				030BE6B519ACBAE500DD66CB /* FLSortedArray.m in Sources */,
+				030BE69219ACBAE500DD66CB /* FLApiStats.m in Sources */,
+				030BE6B719ACBAE500DD66CB /* FLXMLComposer.m in Sources */,
+				030BE69519ACBAE500DD66CB /* FLFileDownloader.m in Sources */,
+				030BE6B119ACBAE500DD66CB /* FLTeeURLConnection.m in Sources */,
+				03FC4E3F17ABD87D0038469A /* FleepReader.xcdatamodeld in Sources */,
+				030BE6B419ACBAE500DD66CB /* FLLogSanitization.m in Sources */,
+				03FC4E6817ABDABC0038469A /* Article.m in Sources */,
+				03FC4E6B17ABDADD0038469A /* UserSubscription.m in Sources */,
+				03FC4E6E17ABDADE0038469A /* Feed.m in Sources */,
+				03FC4E7717ABDDE70038469A /* DataModel.m in Sources */,
+				03FC4E7A17ABDFEF0038469A /* ReaderApi.m in Sources */,
+				030BE68F19ACBAE500DD66CB /* FLApi+Actions.m in Sources */,
+				030BE6B619ACBAE500DD66CB /* FLUtils.m in Sources */,
+				030BE69C19ACBAE500DD66CB /* FLUserProfile.m in Sources */,
+				03FC4E7D17ABF66D0038469A /* User.m in Sources */,
+				030BE6B319ACBAE500DD66CB /* FLJsonParser.m in Sources */,
+				030BE69619ACBAE500DD66CB /* FLFileUploader.m in Sources */,
+				030BE69A19ACBAE500DD66CB /* FLNetworkOperations.m in Sources */,
+				03292C5617B24FD800ADA326 /* RSSParser.m in Sources */,
+				030BE69719ACBAE500DD66CB /* FLMarkupEncoder.m in Sources */,
+				030BE69B19ACBAE500DD66CB /* FLUserCredentials.m in Sources */,
+				030BE6B019ACBAE500DD66CB /* FLObfuscator.m in Sources */,
+				03292C5917B252B500ADA326 /* ContentParser.m in Sources */,
+				030BE69319ACBAE500DD66CB /* FLClassificators.m in Sources */,
+				030BE6B219ACBAE500DD66CB /* FLCommandLineClient.m in Sources */,
+				03292C5C17B2572F00ADA326 /* FeedRequest.m in Sources */,
+				030BE69019ACBAE500DD66CB /* FLApi.m in Sources */,
+				03292C5F17B37A6600ADA326 /* OPMLParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03FC4E4217ABD87D0038469A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		03FC4E4317ABD87D0038469A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		03FC4E4517ABD87D0038469A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FleepReader/FleepReader-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03FC4E4617ABD87D0038469A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FleepReader/FleepReader-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03FC4E2C17ABD87D0038469A /* Build configuration list for PBXProject "FleepReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03FC4E4217ABD87D0038469A /* Debug */,
+				03FC4E4317ABD87D0038469A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03FC4E4417ABD87D0038469A /* Build configuration list for PBXNativeTarget "FleepReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03FC4E4517ABD87D0038469A /* Debug */,
+				03FC4E4617ABD87D0038469A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		03FC4E3D17ABD87D0038469A /* FleepReader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				03FC4E3E17ABD87D0038469A /* FleepReader.xcdatamodel */,
+			);
+			currentVersion = 03FC4E3E17ABD87D0038469A /* FleepReader.xcdatamodel */;
+			path = FleepReader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 03FC4E2917ABD87D0038469A /* Project object */;
+}

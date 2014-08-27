@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'FleepReader' target in the 'FleepReader' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
