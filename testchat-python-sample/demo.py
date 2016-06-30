@@ -10,7 +10,7 @@ import json
 HOST = "https://fleep.io"
 
 # auth info
-FLEEP_ID = "my.test.bot"
+FLEEP_ID = "my.test.bot"  # email can be used as well, i.e. "my.test.bot@gmail.com"
 PSW = "12345678"
 
 # chat topic to find
@@ -21,6 +21,9 @@ MESSAGE = "Hello world!"
 
 # members for new chat
 MEMBERS = "scott.bluemount@fleep.ee, paul.greenlamp@fleep.ee, mary.whitecloud@fleep.ee, julie.roseplum@fleep.ee"
+
+# leave chat after create?
+LEAVE_CHAT = False
 
 
 # login
@@ -68,6 +71,7 @@ if CONV_ID:
             data = json.dumps({
                 "message": MESSAGE,
                 "ticket": TICKET}))
+    r.raise_for_status()
 else:
     # no chat was found, create & post
     r = requests.post(HOST + "/api/conversation/create",
@@ -78,7 +82,14 @@ else:
                 "emails": MEMBERS,
                 "message": MESSAGE,
                 "ticket": TICKET}))
-r.raise_for_status()
+    r.raise_for_status()
+    if LEAVE_CHAT:
+        res = r.json()
+        r = requests.post(HOST + "/api/conversation/leave/" + res.get('header').get('conversation_id'),
+                cookies={"token_id": TOKEN},
+                headers={"Content-Type": "application/json"},
+                data=json.dumps({"ticket": TICKET}))
+        r.raise_for_status()
 
 print 'Posted'
 
