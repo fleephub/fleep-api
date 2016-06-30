@@ -10,13 +10,18 @@ import json
 HOST = "https://fleep.io"
 
 # auth info
-EMAIL = "scott.bluemount@gmail.com"
-PSW = "1234"
+EMAIL = "my.test.bot"
+PSW = "12345678"
 
 # chat topic to find
 TOPIC = "Api send test"
 
+# message to post
 MESSAGE = "Hello world!"
+
+# members for new chat
+MEMBERS = "scott.bluemount@fleep.ee, paul.greenlamp@fleep.ee, mary.whitecloud@fleep.ee, julie.roseplum@fleep.ee"
+
 
 # login
 r = requests.post(HOST + "/api/account/login",
@@ -70,7 +75,7 @@ else:
             headers = {"Content-Type": "application/json"},
             data = json.dumps({
                 "topic": TOPIC,
-                "emails": EMAIL,
+                "emails": MEMBERS,
                 "message": MESSAGE,
                 "ticket": TICKET}))
 r.raise_for_status()
