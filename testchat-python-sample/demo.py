@@ -10,7 +10,7 @@ import json
 HOST = "https://fleep.io"
 
 # auth info
-EMAIL = "my.test.bot"
+FLEEP_ID = "my.test.bot"
 PSW = "12345678"
 
 # chat topic to find
@@ -27,7 +27,7 @@ MEMBERS = "scott.bluemount@fleep.ee, paul.greenlamp@fleep.ee, mary.whitecloud@fl
 r = requests.post(HOST + "/api/account/login",
         headers = {"Content-Type": "application/json"},
         data = json.dumps({
-            "email": EMAIL,
+            "email": FLEEP_ID,
             "password": PSW}))
 r.raise_for_status()
 TICKET = r.json()["ticket"]
