@@ -1,0 +1,70 @@
+{
+  "conversations": [
+    {
+      "topic": "test",
+      "start_time": "2016-03-03 18:11:52.735564+00",
+      "is_premium": true,
+      "conversation_id": "00000000-0000-0000-0000-000000000000",
+      "leavers": [],
+      "guests": [
+        "00000000-0000-0000-0000-000000000000",
+        "00000000-0000-0000-0000-000000000000"
+      ],
+      "members": [
+        "00000000-0000-0000-0000-000000000000"
+      ],
+      "last_message_nr": 46
+    }
+  ],
+  "reply_url": "https://fleep.io/hook/0000000000000000000000",
+  "messages": [
+    {
+      "notification_id": null,
+      "edit_account_id": null,
+      "sender_name": "Helmo Lill",
+      "revision_message_nr": null,
+      "is_new_sheet": null,
+      "file_ids": null,
+      "inbox_nr": 38,
+      "pin_weight": null,
+      "message": "{\"message\":\"<msg><p>message via email</p><p><q>-- <br/>Sent from Fleep. Learn more at <a href=\\\"https://fleep.io/intro\\\">https://fleep.io/intro</a></q></p></msg>\",\"subject\":\"webhooks\"}",
+      "on_behalf_id": null,
+      "mk_rec_type": "message",
+      "profile_id": "00000000-0000-0000-0000-000000000000",
+      "account_id": "00000000-0000-0000-0000-000000000000",
+      "tags": [
+        "add_guests"
+      ],
+      "lock_account_id": null,
+      "mk_message_type": "emailV2",
+      "store_time": "2016-04-13 09:32:52.427734+00",
+      "posted_time": 1460539972,
+      "edited_time": null,
+      "conversation_id": "00000000-0000-0000-0000-000000000000",
+      "message_nr": 46,
+      "flow_message_nr": null,
+      "mention_ids": null,
+      "mk_msg_sub_type": null,
+      "subject_hash": "6d7676e773092d464df9babd37ed48d4c1a2baf7",
+      "assignee_ids": null,
+      "hook_key": null,
+      "raw_id": null,
+      "ref_message_nr": null,
+      "prev_message_nr": 45
+    }
+  ],
+  "contacts": [
+    {
+      "mk_rec_type": "contact",
+      "display_name": null,
+      "account_id": "00000000-0000-0000-0000-000000000000",
+      "mk_account_status": "new",
+      "is_hidden_for_add": false,
+      "phone_nr": null,
+      "avatar_urls": null,
+      "activity_time": null,
+      "fleep_address": null,
+      "email": "support@fleep.io"
+    }
+  ]
+}

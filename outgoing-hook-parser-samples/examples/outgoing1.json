@@ -1,0 +1,67 @@
+{
+  "conversations": [
+    {
+      "topic": "test",
+      "start_time": "2016-03-03 18:11:52.735564+00",
+      "is_premium": true,
+      "conversation_id": "00000000-0000-0000-0000-000000000000",
+      "leavers": [],
+      "guests": [
+        "00000000-0000-0000-0000-000000000000"
+      ],
+      "members": [
+        "00000000-0000-0000-0000-000000000000"
+      ],
+      "last_message_nr": 44
+    }
+  ],
+  "reply_url": "https://fleep.io/hook/0000000000000000000000",
+  "messages": [
+    {
+      "notification_id": null,
+      "edit_account_id": null,
+      "sender_name": null,
+      "revision_message_nr": null,
+      "is_new_sheet": null,
+      "file_ids": null,
+      "inbox_nr": 36,
+      "pin_weight": null,
+      "message": "{\"message\":\"<msg><p>simple message</p></msg>\",\"is_url_preview_disabled\":false}",
+      "on_behalf_id": null,
+      "mk_rec_type": "message",
+      "profile_id": "00000000-0000-0000-0000-000000000000",
+      "account_id": "00000000-0000-0000-0000-000000000000",
+      "tags": [],
+      "lock_account_id": null,
+      "mk_message_type": "textV2",
+      "store_time": "2016-04-13 09:27:54.157507+00",
+      "posted_time": 1460539674,
+      "edited_time": null,
+      "conversation_id": "00000000-0000-0000-0000-000000000000",
+      "message_nr": 44,
+      "flow_message_nr": null,
+      "mention_ids": null,
+      "mk_msg_sub_type": null,
+      "subject_hash": null,
+      "assignee_ids": [],
+      "hook_key": null,
+      "raw_id": null,
+      "ref_message_nr": null,
+      "prev_message_nr": 43
+    }
+  ],
+  "contacts": [
+    {
+      "mk_rec_type": "contact",
+      "display_name": "Helmo",
+      "account_id": "00000000-0000-0000-0000-000000000000",
+      "mk_account_status": "active",
+      "is_hidden_for_add": false,
+      "phone_nr": "+37200000000",
+      "avatar_urls": "{\"size_50\":\"/avatar/0000000000000000000000/0000000000000000000000/thumb50\",\"size_575\":\"/avatar/0000000000000000000000/0000000000000000000000/thumb575\",\"size_700\":\"/avatar/0000000000000000000000/0000000000000000000000/thumb700\",\"size_100\":\"/avatar/0000000000000000000000/0000000000000000000000/thumb100\"}",
+      "activity_time": 1460539567,
+      "fleep_address": "helmo",
+      "email": "support@fleep.io"
+    }
+  ]
+}
