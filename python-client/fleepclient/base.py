@@ -6,6 +6,8 @@ import json
 import logging
 import pprint
 
+DEFAULT_API_VERSION = 2
+
 class FleepApiBase(object):
     """Base class for HTTP API's
     """
@@ -19,6 +21,7 @@ class FleepApiBase(object):
                                 #: something else comes
         self.ticket = None
         self.requests = set()   #: requests processed by server
+        self.api_version = DEFAULT_API_VERSION
 
     def _webapi_call(self, function, *args, **kwargs):
         logging.debug('-' * 60)
@@ -27,7 +30,7 @@ class FleepApiBase(object):
         hdr = {'Content-Type': 'application/json; charset=utf-8', 'Connection': 'Keep-Alive'}
         if self.ticket:
             kwargs['ticket'] = self.ticket
-            kwargs['api_version'] = 2
+            kwargs['api_version'] = self.api_version
         js = json.dumps(kwargs)
 
         logging.debug('REQUEST: %s', url)

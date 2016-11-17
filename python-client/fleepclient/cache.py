@@ -54,6 +54,7 @@ class Message(object):
         'message', 'account_id', 'mk_message_type', 'posted_time',
         'flow_message_nr', 'revision_message_nr', 'pin_weight',
         'ref_message_nr', 'edit_account_id', 'edited_time',
+        'html_email_data',
         'lock_account_id', 'inbox_nr', 'subject')
 
     ALL_FIELDS = ('message_nr', 'tags') + SIMPLE_FIELDS
@@ -135,10 +136,8 @@ class Message(object):
             data = json.loads(self.message)
             names = contacts.get_names(data['members'])
             message = "*** added %s to the conversation ***" % ', '.join(names)
-        elif self.mk_message_type == 'replace':
-            data = json.loads(self.message)
-            names = contacts.get_names(data['members'])
-            message = "*** replaced %s ***" % ', '.join(names)
+        elif self.mk_message_type == 'signin':
+            message = "*** became Fleep user!***"
         elif self.mk_message_type == 'disclose':
             data = json.loads(self.message)
             names = contacts.get_names(data['members'])
@@ -184,7 +183,7 @@ class Message(object):
         elif self.mk_message_type == 'autojoin':
             data = json.loads(self.message)
             message = "***" + re.sub(r'\+ \{.*?\}', '', data['sysmsg_text'][:-1]) + " ***"
-        elif self.mk_message_type == 'share' or self.mk_message_type == 'unshare':
+        elif self.mk_message_type in ('share','unshare','show','unshow','url_previews','no_url_previews'):
             data = json.loads(self.message)
             message = "***" + re.sub(r'\{.*?\}', '', data['sysmsg_text'][:-1]) + " ***"
 
@@ -235,6 +234,7 @@ class Conversation(object):
         self.account_id = None          #: text - conversation owner. Returned when changed.
         self.last_message_time = None   #: when last message was sent to this conversation
         self.hide_message_nr = None     #: message nr where conversation was hidden
+        self.my_message_nr = None       #: last mention number
         self.messages = {}              #: messages by message nr
         self.members = []               #: list of memberInfo records
         self.leavers = []               #: list of leaver id's
@@ -308,10 +308,10 @@ class Conversation(object):
 
         if m.mk_message_type and m.mk_message_type not in (
                 'sysmsg','disclose','hook','unhook','text','email','create',
-                'add','leave','topic','kick','file','replace','alerts','delfile',
+                'add','leave','topic','kick','file','signin','alerts','delfile',
                 'add_team','kick_team','hangout','share','unshare','autojoin',
-                'separator'):
-            logging.warning('Unhandled message type: %s' % m.mk_message_type)
+                'separator','show','unshow','no_url_previews','url_previews','bounce','replace'):
+            logging.warning('Unhandled message type: %s', m.mk_message_type)
 
     def update_file(self, file_rec):
         """Update File information
@@ -331,6 +331,7 @@ class Conversation(object):
         self.pin_horizon = c.get('pin_horizon', self.pin_horizon)
         self.file_horizon = c.get('file_horizon', self.file_horizon)
         self.hide_message_nr = c.get('hide_message_nr', self.hide_message_nr)
+        self.my_message_nr = c.get('my_message_nr', self.my_message_nr)
         self.topic = c.get('topic', self.topic)
         self.account_id = c.get('account_id', self.account_id)
         self.members = c.get('members', self.members)
@@ -404,7 +405,7 @@ class Conversation(object):
             self.teamlist.upsert(rec)
         elif rec['mk_rec_type'] == 'file':
             self.update_file(rec)
-        elif rec['mk_rec_type'] in ['preview','label']:
+        elif rec['mk_rec_type'] in ['preview','label','replace']:
             pass # FIXME?
         else:
             logging.warning('Unhandled record type %s', rec['mk_rec_type'])
@@ -503,8 +504,10 @@ class Conversation(object):
 
     def store(self, read_message_nr = None, labels = None, topic = None,
             mk_alert_level = None, snooze_interval = None, add_emails = None,
-            remove_emails = None, hide_message_nr = None, is_deleted = None,
-            is_autojoin = None):
+            remove_emails = None, disclose_emails = None, hide_message_nr = None,
+            is_deleted = None, is_autojoin = None, is_disclose = None,
+            is_url_preview_disabled = None,
+            add_ids = None, disclose_ids = None, remove_ids = None):
         return self._sync(
             self.api.conversation_store(
                 conversation_id = self.conversation_id,
@@ -515,9 +518,15 @@ class Conversation(object):
                 snooze_interval = snooze_interval,
                 add_emails = add_emails,
                 remove_emails = remove_emails,
+                disclose_emails = disclose_emails,
+                add_ids = add_ids,
+                disclose_ids = disclose_ids,
+                remove_ids = remove_ids,
                 hide_message_nr = hide_message_nr,
                 is_deleted = is_deleted,
                 is_autojoin = is_autojoin,
+                is_disclose = is_disclose,
+                is_url_preview_disabled = is_url_preview_disabled,
                 from_message_nr = self.fw_message_nr))
 
     def leave(self):
@@ -551,12 +560,12 @@ class Conversation(object):
             self.api.message_mark_unread(
                 self.conversation_id, message_nr, self.fw_message_nr))
 
-    def message_send(self, message, file_ids = None, attachments = None, client_req_id = None):
+    def message_send(self, message, attachments = None, client_req_id = None):
         """Send message to flow.
         """
         return self._sync(
             self.api.message_send(
-                self.conversation_id, message, file_ids, self.fw_message_nr, attachments, client_req_id))
+                self.conversation_id, message,  self.fw_message_nr, attachments, client_req_id))
 
     def message_copy(self, message_nr, to_conv_id):
         """Copy message to another conversation
@@ -665,14 +674,14 @@ class Conversation(object):
             return
         labels = self.labels
         is_changed = False
-        for l in range(len(labels)):
-            if labels[l] == label:
+        for i, cur_label in enumerate(labels):
+            if cur_label == label:
                 is_changed = True
-                if new_label == None:
-                    labels.pop(l)
+                if new_label is None:
+                    labels.pop(i)
                     break
                 else:
-                    labels[l] = new_label
+                    labels[i] = new_label
                     break
         if is_changed:
             return self._sync(
@@ -764,10 +773,10 @@ class Conversation(object):
             self.api.conversation_show_activity(
                 self.conversation_id, message_nr, False, self.fw_message_nr))
 
-    def search(self, keywords):
+    def search(self, keywords, search_types=None):
         """Search for keyword
         """
-        res = self.api.search(keywords, self.conversation_id)
+        res = self.api.search(keywords, self.conversation_id, search_types = search_types)
         matches = res.get('matches')
         lines = "Search results for '" + keywords + "':"
         for match in matches:
@@ -844,7 +853,7 @@ class Conversation(object):
             message_pos = bisect_left(nrs, message_nr)
             if message_pos == len(nrs) or nrs[message_pos] >= message_nr:
                 message_pos -= 1
-            if 0 <= message_pos:
+            if message_pos >= 0:
                 return self.messages[nrs[message_pos]]
         return None
 
@@ -853,9 +862,11 @@ class Conversation(object):
         """
         self._sync() # ensure we have initial sync
         alerts_off = '  Alerts: OFF' if self.mk_alert_level == 'never' else ''
-        return "{:<20}  {:<20}  Unread:{:>3}  Read#:{:>3}  Last#:{:>3}  Inbox#:{:>3}  {}".format(
+        has_mention = '@' if self.my_message_nr > self.read_message_nr else ''
+        return "{:<20}  {:<20}  Unread:{:>2}{}  Read#:{:>3}  Last#:{:>3}  Inbox#:{:>3}  {}".format(
             self.topic,
             self.contacts.get_owner(),
+            has_mention,
             self.unread_count,
             self.read_message_nr,
             self.last_message_nr,
@@ -952,7 +963,7 @@ class Conversation(object):
             self.sync_to_last()
             self.show_horizon = 0
         header = self.show_header()
-        flow = "\n" + self.show_flow(show_count = True) if  show_flow else ''
+        flow = "\n" + self.show_flow(show_count = True) if show_flow else ''
         members = '\n' + self.show_members(show_active) if show_members else ''
         pinboard = '\n' + self.show_pinboard() if show_pinboard else ''
         return "%s%s%s%s" % (header, members, pinboard, flow)
@@ -1001,6 +1012,14 @@ class ContactList(object):
         a = self.emails[email]
         self.sync_one(a['account_id'])
 
+    def sync_fadr(self, fleep_address):
+        """
+        """
+        for r_contact in self.contacts.values():
+            if r_contact.get('fleep_address') == fleep_address:
+                return r_contact['account_id']
+        return None
+
     def sync_one(self, account_id):
         """Sync just one contact
         """
@@ -1041,6 +1060,12 @@ class ContactList(object):
         a = self.contacts[account_id]
         return a['email']
 
+    def get_status(self, account_id):
+        if account_id not in self.contacts:
+            self.sync_one(account_id)
+        a = self.contacts[account_id]
+        return a['mk_account_status']
+
     def get_names(self, accounts):
         """Useful for system messages
         """
@@ -1062,6 +1087,7 @@ class ContactList(object):
         r_contact = self.contacts[member_id]
         l = list()
         l.append(self.get_name(member_id))
+        # l.append(self.get_status(member_id))
         if r_activity and r_activity.get('read_message_nr'):
             l.append("Read: %s" % r_activity['read_message_nr'])
         if r_activity and r_activity.get('message_nr') and r_activity.get('is_writing'):
@@ -1079,19 +1105,21 @@ class ContactList(object):
         contacts = sorted(self.contacts.values(), key=lambda x: x['email'])
         contacts_show = [contact for contact in contacts if contact['is_hidden_for_add'] != True]
         contactlist = "Contacts:\n"
-        #return '\n'.join(
-        #   ["%s %s %s %s %s" % (v['email'],v.get('display_name'),v.get('contact_name'),v.get('phone_nr'),v.get('is_dialog_listed')) for v in contacts_show])
         for contact in contacts_show:
+            if contact.get('mk_account_status') == 'closed':
+                continue
             #print contact
-            suggest_dialog = ""
-            if contact.get('is_dialog_listed') == False and contact.get('dialog_id') is not None:
-                suggest_dialog = "Has dialog"
-            elif contact.get('is_dialog_listed') == True:
-                suggest_dialog = "Start dialog!"
             has_avatar = ""
             if contact.get('avatar_urls') is not None and contact.get('avatar_urls') != '{}':
                 has_avatar = "Has avatar"
-            contactlist += "%s %s %s %s %s\n" % (contact.get('email'), contact.get('contact_name'), contact.get('phone_nr'), suggest_dialog, has_avatar)
+
+            display_name = contact.get('display_name') if contact.get('display_name') != contact.get('email') else ''
+            contactlist += "%s %s %s %s %s\n" % (
+                contact.get('email'),
+                contact.get('mk_account_status'),
+                display_name,
+                contact.get('phone_nr'),
+                has_avatar)
         return contactlist
 
     def get_owner(self):
@@ -1185,6 +1213,7 @@ class FleepCache(object):
         self.flags = []
         self.event_horizon = 0                  #: how far we have synced events
         self.aliases = []                       #: list of aliases attachd to this account
+        self.fleep_address = None
 
         # do initial sync:
         while True:
@@ -1335,7 +1364,7 @@ class FleepCache(object):
                     del self.teams.teams[rec['team_id']]
                 else:
                     self.teams.upsert(rec)
-            elif rec['mk_rec_type'] in ['preview','label']:
+            elif rec['mk_rec_type'] in ['preview','label','replace']:
                 pass
             else:
                 logging.warning('Unhandled record type %s', rec['mk_rec_type'])
@@ -1425,7 +1454,12 @@ class FleepCache(object):
 
     def sync_alias(self):
         retval = self.api.alias_sync()
-        self.aliases = retval['stream']
+        self.aliases = []
+        for r_contact in retval['stream']:
+            if r_contact['account_id'] != self.account['account_id']:
+                self.aliases.append(r_contact)
+        for rec in retval['stream']:
+            self.contacts.upsert(rec)
         return retval
 
     def get_aliases(self):
@@ -1446,6 +1480,10 @@ class FleepCache(object):
         for alias in self.aliases:
             email = self.contacts.contacts[alias['account_id']]['email']
             self.api.alias_remove(email)
+
+    def fleep_address_add(self, fleep_address):
+        res = self.api.fleep_address_add(fleep_address)
+        self.fleep_address = res.get('fleep_address')
 
 class FleepListen(object):
     """Client memory cache model

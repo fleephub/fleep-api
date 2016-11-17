@@ -34,8 +34,9 @@ class FleepApi(FleepApiBase):
     ## account
     ##
 
-    def account_configure(self, display_name = None, old_password = None, password = None
-            , email_interval = None, phone_nr = None, is_full_privacy = False):
+    def account_configure(self, display_name = None, old_password = None, password = None,
+            is_automute_enabled=False, # unused?
+            email_interval = None, phone_nr = None, is_full_privacy = None, primary_email = None):
         """Changes account settings
         """
         return self._webapi_call('api/account/configure',
@@ -44,14 +45,20 @@ class FleepApi(FleepApiBase):
                 password = password,
                 email_interval = email_interval,
                 phone_nr = phone_nr,
-                is_full_privacy = is_full_privacy)
+                is_full_privacy = is_full_privacy,
+                primary_email = primary_email)
 
-    def account_configure_apn(self, apn_token):
+    def account_configure_apn(self, apn_token, token_ids):
         """Changes account settings
         """
         return self._webapi_call('api/account/configure_apn',
-                apn_token = apn_token)
+                apn_token = apn_token, token_ids = token_ids)
 
+    def account_configure_android(self, google_id, token_ids):
+        """Changes account settings
+        """
+        return self._webapi_call('/api/account/configure_android',
+                registration_id = google_id, token_ids = token_ids)
 
     def account_confirm(self, notification_id):
         """Confirm receiving an email from fleep
@@ -61,6 +68,12 @@ class FleepApi(FleepApiBase):
         if info and info.get('ticket'):
             self.set_token(ticket = info['ticket'])
         return info
+
+    def account_dialog(self, contact_id):
+        """Opens dialog with given contact
+        """
+        return self._webapi_call('api/account/dialog',
+                contact_id = contact_id)
 
     def account_login(self, email, password, remember_me = False):
         """Handle user login business logic.  If login is successful,
@@ -128,6 +141,11 @@ class FleepApi(FleepApiBase):
     def account_sync_teams(self):
         """Sync teams"""
         return self._webapi_call('api/account/sync_teams')
+
+    def fleep_address_add(self, fleep_address):
+        return self._webapi_call('api/fleep_address/add',
+                fleep_address = fleep_address)
+
 
     ##
     ## alias
@@ -339,8 +357,10 @@ class FleepApi(FleepApiBase):
     def conversation_store(self, conversation_id, read_message_nr = None,
             labels = None, topic = None, mk_alert_level = None,
             snooze_interval = None, add_emails = None, remove_emails = None,
-            hide_message_nr = None, is_deleted = None,
-            is_autojoin = None, from_message_nr = None):
+            disclose_emails = None, hide_message_nr = None, is_deleted = None,
+            is_autojoin = None, is_disclose = None,
+            is_url_preview_disabled = None, from_message_nr = None,
+            add_ids = None, disclose_ids = None, remove_ids = None):
         return self._webapi_call('api/conversation/store', conversation_id,
                 read_message_nr = read_message_nr,
                 labels = labels,
@@ -349,10 +369,16 @@ class FleepApi(FleepApiBase):
                 snooze_interval = snooze_interval,
                 add_emails = add_emails,
                 remove_emails = remove_emails,
+                disclose_emails = disclose_emails,
                 hide_message_nr = hide_message_nr,
                 is_deleted = is_deleted,
                 is_autojoin = is_autojoin,
-                from_message_nr = from_message_nr)
+                is_disclose = is_disclose,
+                is_url_preview_disabled = is_url_preview_disabled,
+                from_message_nr = from_message_nr,
+                add_ids = add_ids,
+                disclose_ids = disclose_ids,
+                remove_ids = remove_ids)
 
     def conversation_update_labels(self, conversation_id, labels):
         """Change conversation labels.
@@ -470,12 +496,11 @@ class FleepApi(FleepApiBase):
                 pin_weight = pin_weight,
                 from_message_nr = from_message_nr)
 
-    def message_send(self, conversation_id, message, file_ids = None, from_message_nr = None, attachments = None, client_req_id = None):
+    def message_send(self, conversation_id, message, from_message_nr = None, attachments = None, client_req_id = None):
         """Send message to flow.
         """
         return self._webapi_call('api/message/send', conversation_id,
                 message = message,
-                file_ids = file_ids,
                 from_message_nr = from_message_nr,
                 attachments = attachments,
                 client_req_id = client_req_id)
@@ -580,11 +605,13 @@ class FleepApi(FleepApiBase):
     ## search
     ##
 
-    def search(self, keywords, conversation_id, needs_suggestions = False):
+    def search(self, keywords, conversation_id=None, need_suggestions = False, is_extended_search=False, search_types=None):
         return self._webapi_call('api/search',
+            is_extended_search = is_extended_search,
             keywords = keywords,
             conversation_id = conversation_id,
-            needs_suggestions = needs_suggestions)
+            need_suggestions = need_suggestions,
+            search_types = search_types)
 
     def search_reset(self):
         return self._webapi_call('api/search/reset')
