@@ -279,9 +279,9 @@ class Conversation(object):
         mnr = message['message_nr']
         if mnr in self.messages:
             self.messages[mnr].apply_stream_rec(message)
-        m = self.messages[mnr]
-        if 'lock_account_id' not in message:
-            m.lock_account_id = None
+            m = self.messages[mnr]
+            if 'lock_account_id' not in message:
+                m.lock_account_id = None
 
     def update_message(self, message):
         """Apply message received from event stream
