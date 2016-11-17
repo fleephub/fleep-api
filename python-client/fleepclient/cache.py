@@ -6,7 +6,7 @@ import json
 import logging
 import re
 import time
-from bisect import bisect_left
+from bisect import bisect_left, bisect_right
 from lxml import etree
 
 def find_xml_refs(xml):
@@ -854,6 +854,21 @@ class Conversation(object):
             if message_pos == len(nrs) or nrs[message_pos] >= message_nr:
                 message_pos -= 1
             if message_pos >= 0:
+                return self.messages[nrs[message_pos]]
+        return None
+
+    def get_next_message(self, message_nr):
+        """Get next message
+        """
+        if message_nr + 1 in self.messages:
+            return self.messages[message_nr + 1]
+        elif message_nr < self.last_message_nr:
+            nrs = self.messages.keys()
+            nrs.sort()
+            message_pos = bisect_right(nrs, message_nr)
+            if message_pos < len(nrs) and nrs[message_pos] <= message_nr:
+                message_pos += 1
+            if message_pos >= 0 and message_pos < len(nrs):
                 return self.messages[nrs[message_pos]]
         return None
 
