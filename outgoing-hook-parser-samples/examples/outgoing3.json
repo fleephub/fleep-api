@@ -1,34 +1,95 @@
 {
   "conversations": [
     {
-      "topic": "test",
-      "start_time": "2016-03-03 18:11:52.735564+00",
-      "is_premium": true,
+      "snooze_time": 0,
+      "is_disclose": null,
+      "members": null,
+      "mk_rec_type": "conv",
+      "read_message_nr": 71,
+      "mk_alert_level": "default",
+      "profile_id": "00000000-0000-0000-0000-000000000000",
+      "default_members": null,
+      "snooze_interval": 0,
+      "topic": "",
+      "has_email_subject": false,
+      "export_progress": "1",
+      "guests": null,
+      "autojoin_url": null,
+      "topic_message_nr": 1,
+      "last_message_time": null,
+      "cmail": null,
+      "delete_message_nr": null,
+      "unread_count": 1,
+      "disclose_message_nr": null,
+      "can_post": true,
+      "is_list": false,
+      "admins": [],
+      "inbox_time": null,
+      "passive": [],
+      "send_message_nr": 1,
+      "join_message_nr": 1,
+      "begin_message_nr": 1,
+      "pending": [],
+      "has_taskboard": false,
+      "labels": null,
+      "read_inbox_nr": 66,
+      "is_init": null,
+      "is_muted": false,
+      "export_files": [],
+      "has_done_notifications": true,
+      "last_message_nr": 72,
+      "label_ids": [],
+      "my_message_nr": null,
+      "is_automute": false,
+      "show_message_nr": 72,
+      "has_pinboard": false,
+      "no_notifications": null,
+      "is_autojoin": null,
+      "is_admin_write_only": null,
+      "is_mark_unread": false,
+      "organisation_id": null,
+      "is_deleted": null,
+      "last_inbox_nr": 67,
       "conversation_id": "00000000-0000-0000-0000-000000000000",
-      "leavers": [],
-      "guests": [
-        "00000000-0000-0000-0000-000000000000",
-        "00000000-0000-0000-0000-000000000000"
-      ],
-      "members": [
-        "00000000-0000-0000-0000-000000000000"
-      ],
-      "last_message_nr": 46
+      "hide_message_nr": null,
+      "teams": [],
+      "mk_conv_type": "cct_no_mail",
+      "assignees": null,
+      "creator_id": "00000000-0000-0000-0000-000000000000",
+      "leavers": null,
+      "is_url_preview_disabled": null,
+      "inbox_message_nr": null,
+      "is_managed": false,
+      "default_call_room": null,
+      "has_task_archive": false
     }
   ],
   "reply_url": "https://fleep.io/hook/0000000000000000000000",
   "messages": [
     {
       "notification_id": null,
+      "reactions": null,
+      "is_assigned": null,
+      "attachments": [],
       "edit_account_id": null,
-      "sender_name": "Helmo Lill",
+      "sender_name": "Helmo",
       "revision_message_nr": null,
+      "is_archived": null,
       "is_new_sheet": null,
       "file_ids": null,
-      "inbox_nr": 38,
+      "inbox_nr": 67,
+      "is_email_locked_for_edit": null,
       "pin_weight": null,
-      "message": "{\"message\":\"<msg><p>message via email</p><p><q>-- <br/>Sent from Fleep. Learn more at <a href=\\\"https://fleep.io/intro\\\">https://fleep.io/intro</a></q></p></msg>\",\"subject\":\"webhooks\"}",
+      "message": "<msg><p>message via email</p><p><q>-- <br/>Helmo</q></p></msg>",
+      "subject": "test",
+      "is_edited_by_others": null,
+      "search_weight": null,
+      "reply_to_message_nr": null,
+      "task_weight": null,
       "on_behalf_id": null,
+      "mk_message_state": "urn:fleep:message:mk_message_state:plain",
+      "message_id": "00000000-0000-0000-0000-000000000000",
+      "pinned_account_id": null,
       "mk_rec_type": "message",
       "profile_id": "00000000-0000-0000-0000-000000000000",
       "account_id": "00000000-0000-0000-0000-000000000000",
@@ -36,35 +97,62 @@
         "add_guests"
       ],
       "lock_account_id": null,
-      "mk_message_type": "emailV2",
-      "store_time": "2016-04-13 09:32:52.427734+00",
-      "posted_time": 1460539972,
+      "section_id": null,
+      "assigner_id": null,
+      "mk_message_type": "email",
+      "store_time": null,
+      "posted_time": 1534849056,
       "edited_time": null,
       "conversation_id": "00000000-0000-0000-0000-000000000000",
-      "message_nr": 46,
+      "message_nr": 72,
+      "is_spam": null,
       "flow_message_nr": null,
+      "mail_hdrs": [
+        {
+          "prefix": "From",
+          "addresses": [
+            {
+              "addr": "support@fleep.io"
+            }
+          ]
+        },
+        {
+          "prefix": "To",
+          "addresses": [
+            {
+              "addr": "conv.xxxxxxxxxxxxxx@fleep.io"
+            }
+          ]
+        }
+      ],
       "mention_ids": null,
       "mk_msg_sub_type": null,
-      "subject_hash": "6d7676e773092d464df9babd37ed48d4c1a2baf7",
+      "tasked_account_id": null,
+      "subject_hash": null,
+      "is_edit": false,
       "assignee_ids": null,
       "hook_key": null,
+      "is_url_preview_disabled": null,
       "raw_id": null,
       "ref_message_nr": null,
-      "prev_message_nr": 45
+      "prev_message_nr": 71
     }
   ],
   "contacts": [
     {
+      "fleep_address": null,
       "mk_rec_type": "contact",
       "display_name": null,
-      "account_id": "00000000-0000-0000-0000-000000000000",
+      "status_emoji": null,
+      "organisation_id": null,
       "mk_account_status": "new",
       "is_hidden_for_add": false,
       "phone_nr": null,
       "avatar_urls": null,
       "activity_time": null,
-      "fleep_address": null,
-      "email": "support@fleep.io"
+      "status_message": null,
+      "email": "support@fleep.io",
+      "account_id": "00000000-0000-0000-0000-000000000000"
     }
   ]
 }

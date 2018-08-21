@@ -1,27 +1,27 @@
 """
 >>> _test('outgoing1.json')
-Helmo 13 April 2016 12:27
+Helmo 18 August 2018 16:18
 simple message
 >>> _test('outgoing2.json')
-Generic Webhook via hook 13 April 2016 12:29
+Generic Webhook via hook 21 August 2018 13:47
 message via hook
 >>> _test('outgoing3.json')
-Helmo Lill via email 13 April 2016 12:32
-Subject: webhooks
+Helmo via email 21 August 2018 13:57
+Subject: test
 <BLANKLINE>
 message via email
 <BLANKLINE>
 --
-Sent from Fleep. Learn more at https://fleep.io/intro
+Helmo
 >>> _test('outgoing4.json')
-Helmo 13 April 2016 12:38
+Helmo 21 August 2018 14:04
 message with files
-https://fleep.io/file/0000000000000000000000/47/0000000000000000000000/IMG_3810.jpg
-https://fleep.io/file/0000000000000000000000/47/0000000000000000000000/IMG_3891.JPG
-https://fleep.io/file/0000000000000000000000/47/0000000000000000000000/IMG_3931.jpg
+https://fleep.io/file/0000000000000000000000/00/0000000000000000000000/Screen%20Shot%202018-08-03%20at%2017.17.40.png
+https://fleep.io/file/0000000000000000000000/00/0000000000000000000000/Screen%20Shot%202018-08-03%20at%2017.17.26.png
+https://fleep.io/file/0000000000000000000000/00/0000000000000000000000/Screen%20Shot%202018-08-03%20at%2017.15.13.png
 >>> _test('outgoing5.json')
-Helmo 13 April 2016 12:48
-message with url http://www.google.com
+Helmo 21 August 2018 14:12
+message with url https://www.google.com
 """
 
 import json
@@ -94,17 +94,15 @@ class FleepMessage():
         r_msg = self._message.get('messages', [])[0]
         msg = r_msg.get('message')
         if msg and not r_msg.get('revision_message_nr'):  # Ignore changed and deleted messages
-            mk_message_type = r_msg.get('mk_message_type')
-            if mk_message_type in ('text', 'email'):
-                msg_txt = self._convert_fleep_xml_to_text(msg)
-            elif mk_message_type in ('textV2', 'emailV2'):
-                msg_txt = ""
-                msg_json = json.loads(msg)
-                msg_subject = msg_json.get('subject')
-                if msg_subject:
-                    msg_txt = "Subject: {}\n\n".format(msg_subject)
-                msg_txt += self._convert_fleep_xml_to_text(msg_json.get('message'))
-                msg_txt += self._get_files(msg_json.get('attachments', []))
+            msg_txt = ""
+
+            msg_subject = r_msg.get('subject')
+            if msg_subject:
+                msg_txt = "Subject: {}\n\n".format(msg_subject)
+
+            msg_txt += self._convert_fleep_xml_to_text(msg)
+
+            msg_txt += self._get_files(r_msg.get('attachments', []))
 
         return msg_txt
 
@@ -149,7 +147,7 @@ def _test(file_name):
     data = open("./examples/" + file_name, 'r').read()
     msg = FleepMessage.from_string(data)
     txt = msg.get_txt()
-    print txt
+    print(txt)
 
 
 if __name__ == '__main__':
