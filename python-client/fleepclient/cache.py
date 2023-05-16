@@ -249,6 +249,7 @@ class Conversation(object):
         self.labels = []                #: labels user has given to this conversation
         self.files = {}                 #: files attached to the conversation messages
         self.autojoin_url = None        #: url for joining conversation
+        self.pin_cursor = None
 
     @staticmethod
     def create(cache, topic, emails = None, message = None, attachments = None):
@@ -343,6 +344,7 @@ class Conversation(object):
         self.inbox_message_nr = c.get('inbox_message_nr', self.inbox_message_nr)
         self.labels = c.get('labels', self.labels)
         self.autojoin_url = c.get('autojoin_url', self.autojoin_url)
+        self.pin_cursor = c.get('pin_cursor')
 
         # we can start showing the conevrsation
         if self.show_horizon is None:
@@ -815,6 +817,17 @@ class Conversation(object):
         self._sync(
             self.api.conversation_sync_pins(
                 self.conversation_id, self.pin_horizon))
+
+    def sync_pins2(self):
+        self._sync() # ensure we have initial sync
+        self._sync(
+            self.api.account_sync_pinboard(
+                self.conversation_id))
+        while self.pin_cursor:
+            cur = json.loads(self.pin_cursor)
+            self._sync(
+                self.api.account_sync_pinboard(
+                    self.conversation_id, cur.get('pin_weight')))
 
     def sync_to_last(self):
         """Sync to the last message in conversation

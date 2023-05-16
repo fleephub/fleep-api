@@ -146,6 +146,9 @@ class FleepApi(FleepApiBase):
         return self._webapi_call('api/fleep_address/add',
                 fleep_address = fleep_address)
 
+    def account_sync_pinboard(self, conversation_id, pin_weight = None, pin_limit = 30):
+        return self._webapi_call('api/account/sync_pinboard',
+                conversation_id = conversation_id, pin_weight = pin_weight, pin_limit = pin_limit)
 
     ##
     ## alias
