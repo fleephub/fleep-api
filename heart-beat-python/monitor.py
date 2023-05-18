@@ -155,6 +155,7 @@ class HeartBeatMonitor(BaseScript):
             if ts:
                 self.log.info(ping_id + ' confirmed')
                 self._last_successful_ping_time = time.time()
+                self._pending_pings = {}  # clear pending pings, we don't really care anymore
 
     def _ack_ping(self, ping):
         ping_id = ping[len(PING_PREFIX):]
