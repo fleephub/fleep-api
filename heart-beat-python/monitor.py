@@ -30,7 +30,9 @@ class HeartBeatMonitor(BaseScript):
 
     _fc = None
     _hb_conv = None
+    _hb_conv_read_msg_nr = 0
     _control_conv = None
+    _control_conv_read_msg_nr = 0
     _phones = []
     _disabled = False
     _pending_pings = {}
@@ -86,6 +88,8 @@ class HeartBeatMonitor(BaseScript):
         self._last_ping_time = time.time()
         self._last_successful_ping_time = time.time()
         self._alert_pending = False
+        self._hb_conv_read_msg_nr = self._hb_conv.last_message_nr
+        self._control_conv_read_msg_nr = self._control_conv.last_message_nr
 
     def _load_phones(self):
         self._control_conv.sync_pins2()
@@ -99,11 +103,12 @@ class HeartBeatMonitor(BaseScript):
                         self._phones.append(phone)
 
     def _sync_control_conv(self):
-        while self._control_conv.last_message_nr > self._control_conv.read_message_nr:
-            msg = self._control_conv.get_next_message(self._control_conv.read_message_nr)
+        while self._control_conv.last_message_nr > self._control_conv_read_msg_nr:
+            msg = self._control_conv.get_next_message(self._control_conv_read_msg_nr)
             if not msg:
                 break
             self._control_conv.mark_read(msg.message_nr)
+            self._control_conv_read_msg_nr = msg.message_nr
             if msg.mk_message_type == 'text':
                 msg_txt = convert_xml_to_text(msg.message).strip()
                 self._process_control_msg(msg_txt)
@@ -132,14 +137,15 @@ class HeartBeatMonitor(BaseScript):
                 self._control_conv.message_send(reply)
 
     def _sync_hb_conv(self):
-        while self._hb_conv.last_message_nr > self._hb_conv.read_message_nr:
-            msg = self._hb_conv.get_next_message(self._hb_conv.read_message_nr)
+        while self._hb_conv.last_message_nr > self._hb_conv_read_msg_nr:
+            msg = self._hb_conv.get_next_message(self._hb_conv_read_msg_nr)
             if not msg:
                 break
             self._hb_conv.mark_read(msg.message_nr)
+            self._hb_conv_read_msg_nr = msg.message_nr
             if msg.mk_message_type == 'text':
                 msg_txt = convert_xml_to_text(msg.message).strip()
-                self.log.info('Got hb message: {}'.format(msg_txt))
+                self.log.debug('Got hb message: {}'.format(msg_txt))
                 self._process_hb_msg(msg_txt)
 
     def _process_hb_msg(self, msg):
@@ -171,7 +177,7 @@ class HeartBeatMonitor(BaseScript):
                 ping_id = ''.join(random.sample(string.ascii_lowercase, PING_LEN))
                 ping = PING_PREFIX + ping_id
                 self._pending_pings[ping_id] = now
-                self.log.info(ping + ' send')
+                self.log.info(ping_id + ' send')
                 self._hb_conv.message_send(ping)
 
     def _process_alerts(self):
