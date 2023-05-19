@@ -181,5 +181,10 @@ class HeartBeatMonitor(BaseScript):
                 self._send_alert('Heartbeat failure')
 
     def _send_alert(self, txt):
+        account = self._fc.account
+        username = account.get('display_name') or account.get('fleep_address') or account.get('email') or ''
+        msg = '{}: {}'.format(username, txt)
+        self.log.info('Sending SMS - ' + msg)
         for nr in self._phones:
-            self._twilio_client.messages.create(to=nr, from_=self.cf.get('twilio_from'), body=txt)
+            self.log.info('Phone ' + nr)
+            self._twilio_client.messages.create(to=nr, from_=self.cf.get('twilio_from'), body=msg)
