@@ -38,7 +38,6 @@ class HeartBeatMonitor(BaseScript):
     _pending_pings = {}
     _last_ping_time = None
     _last_successful_ping_time = time.time()
-    _alert_pending = None
     _twilio_client = None
 
     def reload(self):
@@ -87,7 +86,6 @@ class HeartBeatMonitor(BaseScript):
         self._pending_pings = {}
         self._last_ping_time = time.time()
         self._last_successful_ping_time = time.time()
-        self._alert_pending = False
         self._hb_conv_read_msg_nr = self._hb_conv.last_message_nr
         self._control_conv_read_msg_nr = self._control_conv.last_message_nr
 
@@ -170,7 +168,7 @@ class HeartBeatMonitor(BaseScript):
             self._hb_conv.message_send(ACK_PREFIX + ping)
 
     def _send_ping(self):
-        if not self._disabled and not self._alert_pending:
+        if not self._disabled:
             now = time.time()
             if not self._last_ping_time or now - self._last_ping_time > PING_INTERVAL:
                 self._last_ping_time = now
@@ -181,9 +179,9 @@ class HeartBeatMonitor(BaseScript):
                 self._hb_conv.message_send(ping)
 
     def _process_alerts(self):
-        if not self._disabled and not self._alert_pending:
+        if not self._disabled:
             if time.time() - self._last_successful_ping_time > PING_ALERT_TIME:
-                self._alert_pending = True
+                self._disabled = True
                 self._send_alert('Heartbeat failure')
 
     def _send_alert(self, txt):
