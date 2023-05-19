@@ -21,6 +21,7 @@ PING_LEN = 8
 MIN_PHONE_LEN = 10
 PING_INTERVAL = 60  # in seconds
 PING_ALERT_TIME = 300  # in seconds
+DISABLED_REMINDER_TIME = 3600  # in seconds
 
 class HeartBeatMonitorException(Exception):
     """ Errors """
@@ -34,7 +35,7 @@ class HeartBeatMonitor(BaseScript):
     _control_conv = None
     _control_conv_read_msg_nr = 0
     _phones = []
-    _disabled = False
+    _disabled = None
     _pending_pings = {}
     _last_ping_time = None
     _last_successful_ping_time = time.time()
@@ -79,10 +80,10 @@ class HeartBeatMonitor(BaseScript):
             self.log.info(msg)
         else:
             self.log.warning('No phone numbers found!')
-            self._disabled = True
+            self._disabled = time.time()
 
     def _reset(self):
-        self._disabled = False
+        self._disabled = None
         self._pending_pings = {}
         self._last_ping_time = time.time()
         self._last_successful_ping_time = time.time()
@@ -119,7 +120,7 @@ class HeartBeatMonitor(BaseScript):
             if msg.startswith('/broadcast '):
                 self._send_alert(msg[11:])
             elif msg == '/disable':
-                self._disabled = True
+                self._disabled = time.time()
                 reply = 'Alerts disabled'
             elif msg == '/phones':
                 reply = 'Current alert phones: <{}>'.format(','.join(self._phones))
@@ -179,9 +180,15 @@ class HeartBeatMonitor(BaseScript):
                 self._hb_conv.message_send(ping)
 
     def _process_alerts(self):
-        if not self._disabled:
-            if time.time() - self._last_successful_ping_time > PING_ALERT_TIME:
-                self._disabled = True
+        now = time.time()
+        if self._disabled:
+            if now - self._disabled > DISABLED_REMINDER_TIME:
+                self._disabled = now
+                self.log.info('Alerts disabled')
+                self._control_conv.message_send('Alerts disabled')
+        else:
+            if now - self._last_successful_ping_time > PING_ALERT_TIME:
+                self._disabled = now
                 self._send_alert('Heartbeat failure')
 
     def _send_alert(self, txt):
