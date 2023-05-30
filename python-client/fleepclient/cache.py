@@ -12,7 +12,7 @@ from lxml import etree
 def find_xml_refs(xml):
     rlist = []
 
-    if isinstance(xml, unicode):
+    if isinstance(xml, str):
         xml = xml.encode('utf8')
 
     root = etree.fromstring(xml)
@@ -861,7 +861,7 @@ class Conversation(object):
         if message_nr - 1 in self.messages:
             return self.messages[message_nr - 1]
         else:
-            nrs = self.messages.keys()
+            nrs = list(self.messages.keys())
             nrs.sort()
             message_pos = bisect_left(nrs, message_nr)
             if message_pos == len(nrs) or nrs[message_pos] >= message_nr:
@@ -876,7 +876,7 @@ class Conversation(object):
         if message_nr + 1 in self.messages:
             return self.messages[message_nr + 1]
         elif message_nr < self.last_message_nr:
-            nrs = self.messages.keys()
+            nrs = list(self.messages.keys())
             nrs.sort()
             message_pos = bisect_right(nrs, message_nr)
             if message_pos < len(nrs) and nrs[message_pos] <= message_nr:
@@ -913,7 +913,7 @@ class Conversation(object):
 
     def show_all(self):
         self._sync() # ensure we have initial sync
-        nrs = self.messages.keys()
+        nrs = list(self.messages.keys())
         nrs.sort()
         flow = ''
         lines = self.get_lines(nrs)
@@ -922,7 +922,7 @@ class Conversation(object):
 
     def show_tasklist(self, show_archive = False):
         self._sync()
-        nrs = self.messages.keys()
+        nrs = list(self.messages.keys())
         nrs.sort()
         lines = []
         if show_archive:
@@ -945,7 +945,7 @@ class Conversation(object):
         """Show next part of message flow
         """
         self._sync() # ensure we have initial sync
-        nrs = self.messages.keys()
+        nrs = list(self.messages.keys())
         nrs.sort()
         flow = ''
         if self.show_horizon < self.last_message_nr:

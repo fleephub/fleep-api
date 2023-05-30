@@ -94,7 +94,7 @@ def convert_xml_to_text(xmlstr, skip_quote=False, skip_refs=False, no_markup=Fal
     """
     if not xmlstr:
         raise ValueError("Empty XML")
-    if isinstance(xmlstr, unicode):
+    if isinstance(xmlstr, str):
         xmlstr = xmlstr.encode('utf8')
     handler = UnparseText(skip_quote, skip_refs, no_markup)
     try:

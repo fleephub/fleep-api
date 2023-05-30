@@ -423,9 +423,9 @@ class FleepApi(FleepApiBase):
         return self._webapi_call('api/avatar/delete')
 
     def avatar_download(self, profile_id, file_id, filename):
-        print profile_id
-        print file_id
-        print filename
+        print(profile_id)
+        print(file_id)
+        print(filename)
         url = 'api/avatar/' + profile_id + '/' + file_id + '/' + filename
         return self._webapi_call(url)
 
